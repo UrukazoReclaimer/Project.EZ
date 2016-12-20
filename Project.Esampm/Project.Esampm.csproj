@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CDBB3CA-D173-4AC9-B924-B9433CF79CD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project.Esampm</RootNamespace>
+    <AssemblyName>Project.Esampm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Urukazo\Desktop\Ejecutable20122016\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>87</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A1433EECA8D1B79BC1A30A6527AFA8675D3D637C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Project.Esampm_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="esamDataSet9.Designer.cs">
+      <HintPath>obj\Debug\TempPE\esamDataSet9.Designer.cs.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graficos.Designer.cs">
+      <DependentUpon>Graficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeLugaresSinPlanificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeLugaresSinPlanificacion.Designer.cs">
+      <DependentUpon>InformeLugaresSinPlanificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeServicioNoRealizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeServicioNoRealizados.Designer.cs">
+      <DependentUpon>InformeServicioNoRealizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeServicioRealizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeServicioRealizados.Designer.cs">
+      <DependentUpon>InformeServicioRealizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeServicioReplanificados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeServicioReplanificados.Designer.cs">
+      <DependentUpon>InformeServicioReplanificados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeServiciosPlanificados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeServiciosPlanificados.Designer.cs">
+      <DependentUpon>InformeServiciosPlanificados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeServicioSupendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeServicioSupendido.Designer.cs">
+      <DependentUpon>InformeServicioSupendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadTrimensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadTrimensual.Designer.cs">
+      <DependentUpon>PeriodicidadTrimensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDispositivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDispositivo.Designer.cs">
+      <DependentUpon>RDispositivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informe.Designer.cs">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformePlanificados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformePlanificados.Designer.cs">
+      <DependentUpon>InformePlanificados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarArea.Designer.cs">
+      <DependentUpon>IngresarArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarClientes.Designer.cs">
+      <DependentUpon>IngresarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarLugarTratamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarLugarTratamiento.Designer.cs">
+      <DependentUpon>IngresarLugarTratamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarPLano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarPLano.Designer.cs">
+      <DependentUpon>IngresarPLano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarServicios.Designer.cs">
+      <DependentUpon>IngresarServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadBimensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadBimensual.Designer.cs">
+      <DependentUpon>PeriodicidadBimensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Periodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Periodo.Designer.cs">
+      <DependentUpon>Periodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDispositivoTemporal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDispositivoTemporal.Designer.cs">
+      <DependentUpon>RDispositivoTemporal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarServicios.Designer.cs">
+      <DependentUpon>RegistrarServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarTecnico.Designer.cs">
+      <DependentUpon>IngresarTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarVehiculo.Designer.cs">
+      <DependentUpon>IngresarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcionInforme.Designer.cs">
+      <DependentUpon>OpcionInforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadAsolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadAsolicitud.Designer.cs">
+      <DependentUpon>PeriodicidadAsolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadSemanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadSemanal.Designer.cs">
+      <DependentUpon>PeriodicidadSemanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriocidadMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriocidadMensual.Designer.cs">
+      <DependentUpon>PeriocidadMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriocidadQuincenal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriocidadQuincenal.Designer.cs">
+      <DependentUpon>PeriocidadQuincenal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadAnual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadAnual.Designer.cs">
+      <DependentUpon>PeriodicidadAnual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadSemestral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadSemestral.Designer.cs">
+      <DependentUpon>PeriodicidadSemestral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadTrimestral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadTrimestral.Designer.cs">
+      <DependentUpon>PeriodicidadTrimestral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicidadUnicaVez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodicidadUnicaVez.Designer.cs">
+      <DependentUpon>PeriodicidadUnicaVez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillaR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanillaR.Designer.cs">
+      <DependentUpon>PlanillaR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillaServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanillaServicio.Designer.cs">
+      <DependentUpon>PlanillaServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Replanificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Replanificar.Designer.cs">
+      <DependentUpon>Replanificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suspendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suspendido.Designer.cs">
+      <DependentUpon>Suspendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuspendidoTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuspendidoTotal.Designer.cs">
+      <DependentUpon>SuspendidoTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableroPeriodicidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableroPeriodicidad.Designer.cs">
+      <DependentUpon>TableroPeriodicidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipodeRetiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipodeRetiro.Designer.cs">
+      <DependentUpon>TipodeRetiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoDeSuspendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoDeSuspendido.Designer.cs">
+      <DependentUpon>TipoDeSuspendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiposContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposContacto.Designer.cs">
+      <DependentUpon>TiposContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vacaciones.Designer.cs">
+      <DependentUpon>Vacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="validar.cs" />
+    <EmbeddedResource Include="Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graficos.resx">
+      <DependentUpon>Graficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeLugaresSinPlanificacion.resx">
+      <DependentUpon>InformeLugaresSinPlanificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeServicioNoRealizados.resx">
+      <DependentUpon>InformeServicioNoRealizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeServicioRealizados.resx">
+      <DependentUpon>InformeServicioRealizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeServicioReplanificados.resx">
+      <DependentUpon>InformeServicioReplanificados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeServiciosPlanificados.resx">
+      <DependentUpon>InformeServiciosPlanificados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeServicioSupendido.resx">
+      <DependentUpon>InformeServicioSupendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadTrimensual.resx">
+      <DependentUpon>PeriodicidadTrimensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDispositivo.resx">
+      <DependentUpon>RDispositivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informe.resx">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformePlanificados.resx">
+      <DependentUpon>InformePlanificados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarArea.resx">
+      <DependentUpon>IngresarArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarClientes.resx">
+      <DependentUpon>IngresarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarLugarTratamiento.resx">
+      <DependentUpon>IngresarLugarTratamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarPLano.resx">
+      <DependentUpon>IngresarPLano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarServicios.resx">
+      <DependentUpon>IngresarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadBimensual.resx">
+      <DependentUpon>PeriodicidadBimensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Periodo.resx">
+      <DependentUpon>Periodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDispositivoTemporal.resx">
+      <DependentUpon>RDispositivoTemporal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarServicios.resx">
+      <DependentUpon>RegistrarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarTecnico.resx">
+      <DependentUpon>IngresarTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarVehiculo.resx">
+      <DependentUpon>IngresarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcionInforme.resx">
+      <DependentUpon>OpcionInforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadAsolicitud.resx">
+      <DependentUpon>PeriodicidadAsolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadSemanal.resx">
+      <DependentUpon>PeriodicidadSemanal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriocidadMensual.resx">
+      <DependentUpon>PeriocidadMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriocidadQuincenal.resx">
+      <DependentUpon>PeriocidadQuincenal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadAnual.resx">
+      <DependentUpon>PeriodicidadAnual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadSemestral.resx">
+      <DependentUpon>PeriodicidadSemestral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadTrimestral.resx">
+      <DependentUpon>PeriodicidadTrimestral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicidadUnicaVez.resx">
+      <DependentUpon>PeriodicidadUnicaVez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillaR.resx">
+      <DependentUpon>PlanillaR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillaServicio.resx">
+      <DependentUpon>PlanillaServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Replanificar.resx">
+      <DependentUpon>Replanificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suspendido.resx">
+      <DependentUpon>Suspendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuspendidoTotal.resx">
+      <DependentUpon>SuspendidoTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableroPeriodicidad.resx">
+      <DependentUpon>TableroPeriodicidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipodeRetiro.resx">
+      <DependentUpon>TipodeRetiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoDeSuspendido.resx">
+      <DependentUpon>TipoDeSuspendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiposContacto.resx">
+      <DependentUpon>TiposContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vacaciones.resx">
+      <DependentUpon>Vacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Project.Esampm_ClaveTemporal.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.BussinessRules\Project.BussinessRules.csproj">
+      <Project>{3949e22b-2086-4054-938d-1dbc67b24557}</Project>
+      <Name>Project.BussinessRules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

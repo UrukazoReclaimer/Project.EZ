@@ -1,0 +1,20 @@
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.DataAccess\bin\Debug\Project.DataAccess.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.DataAccess\bin\Debug\Project.DataAccess.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.DataAccess\obj\Debug\Project.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.DataAccess\obj\Debug\Project.DataAccess.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.DataAccess\obj\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.pdb

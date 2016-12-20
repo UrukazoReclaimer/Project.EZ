@@ -1,0 +1,35 @@
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\obj\Debug\Project.BussinessRules.csprojResolveAssemblyReference.cache
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\bin\Debug\Project.BussinessRules.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\bin\Debug\Project.BussinessRules.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\bin\Debug\Project.DataAccess.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\bin\Debug\Project.DataAccess.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\obj\Debug\Project.BussinessRules.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.BussinessRules\obj\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\bin\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\obj\Debug\Project.BussinessRules.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\obj\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\Project.EsamP\Project.BussinessRules\obj\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\bin\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.BussinessRules.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.DataAccess.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\bin\Debug\Project.DataAccess.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.csprojResolveAssemblyReference.cache
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.BussinessRules\obj\Debug\Project.BussinessRules.pdb

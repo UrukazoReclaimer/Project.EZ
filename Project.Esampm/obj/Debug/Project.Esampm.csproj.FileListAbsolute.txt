@@ -1,0 +1,191 @@
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.Esampm.exe.config
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.Esampm.exe
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.Esampm.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.csprojResolveAssemblyReference.cache
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.Form1.resources
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.Properties.Resources.resources
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.csproj.GenerateResource.Cache
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.exe
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.BussinessRules.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.DataAccess.dll
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.BussinessRules.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\bin\Debug\Project.DataAccess.pdb
+c:\users\uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.IngresarTecnico.resources
+C:\Users\Uruk\Documents\Visual Studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.IngresarServicios.resources
+C:\Users\Uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.PlanillaServicios.resources
+C:\Users\Uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.Entrada.resources
+C:\Users\Uruk\documents\visual studio 2013\Projects\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.IngresarClientes.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.Esampm.exe.config
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.Entrada.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.Form1.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.IngresarClientes.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.IngresarServicios.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.IngresarTecnico.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.PlanillaServico.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.Properties.Resources.resources
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\obj\Debug\Project.Esampm.csproj.GenerateResource.Cache
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\Project.EsamP\Project.Esampm\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.config
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Entrada.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Form1.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarClientes.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarServicios.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarTecnico.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PlanillaServico.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Properties.Resources.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.csproj.GenerateResource.Cache
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarLugarTratamiento.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadSemanal.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriocidadMensual.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriocidadQuincenal.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadAnual.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadSemestral.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadTrimestral.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TableroPeriodicidad.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadAsolicitud.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadUnicaVez.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarArea.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarPLano.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarVehiculo.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Informe.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\itextsharp.xml
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PlanillaR.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.manifest
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.application
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe.manifest
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.application
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.OpcionInforme.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TiposContacto.resources
+C:\Users\Uruk\Desktop\respaldo esam con mas ventanas\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.config
+C:\Users\Uruk\Desktop\respaldo esam con mas ventanas\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\respaldo esam con mas ventanas\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\bin\Debug\esamDataSet9.Designer.cs.dll
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformePlanificados.resources
+C:\Users\Uruk\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.RegistrarServicios.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.config
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.manifest
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.application
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\esamDataSet9.Designer.cs.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.BussinessRules.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.DataAccess.dll
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\itextsharp.xml
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\bin\Debug\Project.DataAccess.pdb
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.csprojResolveAssemblyReference.cache
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Entrada.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Form1.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Informe.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformePlanificados.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarArea.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarClientes.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarLugarTratamiento.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarPLano.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarServicios.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.RegistrarServicios.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarTecnico.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarVehiculo.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.OpcionInforme.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadAsolicitud.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadSemanal.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriocidadMensual.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriocidadQuincenal.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadAnual.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadSemestral.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadTrimestral.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadUnicaVez.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PlanillaR.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PlanillaServico.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Properties.Resources.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TableroPeriodicidad.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TiposContacto.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.csproj.GenerateResource.Cache
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe.manifest
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.application
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Periodo.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadBimensual.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.RDispositivo.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TipodeRetiro.resources
+C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadTrimensual.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.config
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.csprojResolveAssemblyReference.cache
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Entrada.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Form1.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadTrimensual.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.RDispositivo.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Informe.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformePlanificados.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarArea.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarClientes.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarLugarTratamiento.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarPLano.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarServicios.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadBimensual.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Periodo.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.RegistrarServicios.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarTecnico.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.IngresarVehiculo.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.OpcionInforme.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadAsolicitud.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadSemanal.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriocidadMensual.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriocidadQuincenal.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadAnual.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadSemestral.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadTrimestral.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PeriodicidadUnicaVez.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PlanillaR.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Properties.Resources.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TableroPeriodicidad.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TipodeRetiro.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TiposContacto.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.csproj.GenerateResource.Cache
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe.manifest
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.application
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.exe
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.Esampm.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\esamDataSet9.Designer.cs.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.BussinessRules.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.DataAccess.dll
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.BussinessRules.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\itextsharp.xml
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\bin\Debug\Project.DataAccess.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.exe.manifest
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.application
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Replanificar.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.RDispositivoTemporal.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Suspendido.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.TipoDeSuspendido.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformeLugaresSinPlanificacion.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformeServiciosPlanificados.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformeServicioReplanificados.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformeServicioRealizados.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformeServicioSupendido.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.PlanillaServicio.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Graficos.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.Vacaciones.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.SuspendidoTotal.resources
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.Esampm\obj\Debug\Project.Esampm.InformeServicioNoRealizados.resources

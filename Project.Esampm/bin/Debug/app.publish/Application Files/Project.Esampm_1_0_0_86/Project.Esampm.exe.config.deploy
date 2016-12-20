@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <connectionStrings>
+    <add name="Project.Esampm.Properties.Settings.esamConnectionString" connectionString="server=127.0.0.1;user id=root;database=esam" providerName="MySql.Data.MySqlClient"/>
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5"/>
+  </startup>
+  <appSettings>
+    <add key="PROVEEDOR" value="MySql.Data.MySqlClient"/>
+    <add key="CADENA" value="Server=192.168.1.99;Database=bdesam6;UID=root;Password=root;"/>
+    <add key="ChartImageHandler" value="storage=file;timeout=20;dir=c:\TempImageFiles\;"/>
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+  </appSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>
