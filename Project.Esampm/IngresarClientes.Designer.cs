@@ -49,7 +49,10 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -85,16 +88,18 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlanodeLugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
@@ -107,14 +112,23 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -123,28 +137,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource3)).BeginInit();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(215, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 68);
             this.button1.TabIndex = 19;
             this.button1.Text = "Agregar Cliente / Primer lugar de tratamiento";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 23);
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(6, 102);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 23);
+            this.button2.Size = new System.Drawing.Size(130, 23);
             this.button2.TabIndex = 16;
             this.button2.Text = "Modificar Cliente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
@@ -181,7 +199,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Clasificacion";
+            this.label5.Text = "Clasificación";
             // 
             // textBox1
             // 
@@ -233,7 +251,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(331, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(424, 298);
+            this.dataGridView1.Size = new System.Drawing.Size(424, 351);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -241,7 +259,7 @@
             // Codigo
             // 
             this.Codigo.DataPropertyName = "Cod";
-            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.HeaderText = "Código";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
             // 
@@ -262,7 +280,7 @@
             // Clasificacion
             // 
             this.Clasificacion.DataPropertyName = "Clasificacion";
-            this.Clasificacion.HeaderText = "Clasificacion";
+            this.Clasificacion.HeaderText = "Clasificación";
             this.Clasificacion.Name = "Clasificacion";
             this.Clasificacion.ReadOnly = true;
             // 
@@ -280,14 +298,14 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Telefono";
+            this.label8.Text = "Teléfono";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(791, 12);
+            this.comboBox2.Location = new System.Drawing.Point(1225, 11);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(29, 20);
             this.comboBox2.TabIndex = 23;
@@ -297,7 +315,9 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.textBox9);
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.textBox7);
@@ -307,14 +327,14 @@
             this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(12, 408);
+            this.panel2.Location = new System.Drawing.Point(15, 469);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(310, 177);
+            this.panel2.Size = new System.Drawing.Size(310, 235);
             this.panel2.TabIndex = 37;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(146, 141);
+            this.button9.Location = new System.Drawing.Point(135, 127);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(132, 26);
             this.button9.TabIndex = 15;
@@ -322,13 +342,46 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(138, 159);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(167, 65);
+            this.panel1.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 52);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Para Modificar:\r\n-Seleccione el lugar\r\n-Cambie en el campo deseado\r\n-Click botón " +
+    "Modificar";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
+            // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(139, 101);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(119, 20);
             this.textBox9.TabIndex = 13;
             this.textBox9.Text = "Contacto Lugar";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Red;
+            this.button5.Enabled = false;
+            this.button5.Location = new System.Drawing.Point(13, 168);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(119, 23);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Modificar Contacto";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // label13
             // 
@@ -381,17 +434,18 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(14, 137);
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Location = new System.Drawing.Point(14, 127);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 35);
             this.button3.TabIndex = 14;
-            this.button3.Text = "Agregar Contacto Administracion";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "Agregar Contacto Administración";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(11, 195);
+            this.button7.Location = new System.Drawing.Point(7, 184);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(126, 23);
             this.button7.TabIndex = 8;
@@ -401,12 +455,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(140, 195);
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Location = new System.Drawing.Point(6, 152);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 23);
+            this.button4.Size = new System.Drawing.Size(127, 26);
             this.button4.TabIndex = 9;
             this.button4.Text = "Agregar Lugar Nuevo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // comboBox6
@@ -427,11 +482,14 @@
             "Huelmo.",
             "Calbuco.",
             "Pargua.",
+            "Frutillar",
+            "Fresia",
             "Llanquihue"});
             this.comboBox6.Location = new System.Drawing.Point(140, 69);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(120, 21);
             this.comboBox6.TabIndex = 6;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -468,12 +526,13 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(121, 20);
             this.textBox8.TabIndex = 5;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // comboBox4
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(826, 12);
+            this.comboBox4.Location = new System.Drawing.Point(1260, 11);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(30, 20);
             this.comboBox4.TabIndex = 25;
@@ -490,7 +549,7 @@
             this.Ruta});
             this.dataGridView2.Location = new System.Drawing.Point(761, 98);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(542, 298);
+            this.dataGridView2.Size = new System.Drawing.Size(583, 351);
             this.dataGridView2.TabIndex = 21;
             this.dataGridView2.TabStop = false;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -504,7 +563,7 @@
             // NombreLugar
             // 
             this.NombreLugar.DataPropertyName = "Nomtrata";
-            this.NombreLugar.HeaderText = "NombreLugar";
+            this.NombreLugar.HeaderText = "Nombre Lugar";
             this.NombreLugar.Name = "NombreLugar";
             // 
             // RutCliente
@@ -527,7 +586,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(15, 12);
+            this.button6.Location = new System.Drawing.Point(389, 69);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 27;
@@ -540,24 +599,24 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(5, 52);
+            this.panel3.Location = new System.Drawing.Point(142, 97);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(165, 96);
+            this.panel3.Size = new System.Drawing.Size(165, 74);
             this.panel3.TabIndex = 28;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 8);
+            this.label14.Location = new System.Drawing.Point(3, 9);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(150, 52);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Para Modificar:\r\n-Seleccione el cliente\r\n-Cambie en el campo deseado\r\n-Click boto" +
+            this.label14.Text = "Para Modificar:\r\n-Seleccione el cliente\r\n-Cambie en el campo deseado\r\n-Click botó" +
     "n Modificar";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(968, 12);
+            this.textBox3.Location = new System.Drawing.Point(1296, 12);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(21, 20);
             this.textBox3.TabIndex = 29;
@@ -567,7 +626,7 @@
             // 
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(754, 12);
+            this.comboBox7.Location = new System.Drawing.Point(1188, 12);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(31, 20);
             this.comboBox7.TabIndex = 30;
@@ -585,9 +644,9 @@
             this.Telefono,
             this.TipoContacto,
             this.PlanodeLugar});
-            this.dataGridView3.Location = new System.Drawing.Point(862, 436);
+            this.dataGridView3.Location = new System.Drawing.Point(428, 460);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(482, 172);
+            this.dataGridView3.Size = new System.Drawing.Size(916, 198);
             this.dataGridView3.TabIndex = 22;
             this.dataGridView3.TabStop = false;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
@@ -613,7 +672,7 @@
             // NombreContacto
             // 
             this.NombreContacto.DataPropertyName = "NOMBRE";
-            this.NombreContacto.HeaderText = "NombreContato";
+            this.NombreContacto.HeaderText = "NombreContacto";
             this.NombreContacto.Name = "NombreContacto";
             // 
             // Correo
@@ -640,39 +699,9 @@
             this.PlanodeLugar.HeaderText = "PlanodeLugar";
             this.PlanodeLugar.Name = "PlanodeLugar";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(176, 23);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 23);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Modificar Contacto";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(176, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 96);
-            this.panel1.TabIndex = 33;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 52);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Para Modificar:\r\n-Seleccione el lugar\r\n-Cambie en el campo deseado\r\n-Click boton " +
-    "Modificar";
-            this.label6.Click += new System.EventHandler(this.label6_Click_1);
-            // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(1018, 12);
+            this.textBox10.Location = new System.Drawing.Point(1323, 12);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(21, 20);
             this.textBox10.TabIndex = 34;
@@ -680,21 +709,23 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(349, 23);
+            this.button8.BackColor = System.Drawing.Color.Red;
+            this.button8.Enabled = false;
+            this.button8.Location = new System.Drawing.Point(6, 213);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(167, 23);
+            this.button8.Size = new System.Drawing.Size(127, 23);
             this.button8.TabIndex = 18;
-            this.button8.Text = "Modificar Lugar de tratamiento";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Text = "Modificar Lugar";
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(349, 52);
+            this.panel4.Location = new System.Drawing.Point(138, 152);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(167, 96);
+            this.panel4.Size = new System.Drawing.Size(167, 70);
             this.panel4.TabIndex = 35;
             // 
             // label7
@@ -704,13 +735,18 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 52);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Para Modificar:\r\n-Seleccione el lugar\r\n-Cambie en el campo deseado\r\n-Click boton " +
+            this.label7.Text = "Para Modificar:\r\n-Seleccione el lugar\r\n-Cambie en el campo deseado\r\n-Click botón " +
     "Modificar";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.comboBox11);
+            this.panel5.Controls.Add(this.comboBox10);
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.label16);
@@ -721,10 +757,40 @@
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.textBox8);
-            this.panel5.Location = new System.Drawing.Point(15, 173);
+            this.panel5.Location = new System.Drawing.Point(12, 212);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(310, 223);
+            this.panel5.Size = new System.Drawing.Size(313, 251);
             this.panel5.TabIndex = 36;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Location = new System.Drawing.Point(266, 43);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(39, 20);
+            this.comboBox11.TabIndex = 46;
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.comboBox10.Location = new System.Drawing.Point(139, 123);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(121, 21);
+            this.comboBox10.TabIndex = 37;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(11, 124);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(40, 13);
+            this.label21.TabIndex = 36;
+            this.label21.Text = "Estado";
             // 
             // label16
             // 
@@ -748,6 +814,29 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 7;
             // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "Cuadro Cliente",
+            "Cuadro Lugares",
+            "Cuadro Lugar y Contactos"});
+            this.comboBox9.Location = new System.Drawing.Point(331, 492);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(91, 21);
+            this.comboBox9.TabIndex = 35;
+            // 
+            // button10
+            // 
+            this.button10.Image = global::Project.Esampm.Properties.Resources.excel_icon;
+            this.button10.Location = new System.Drawing.Point(331, 460);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(91, 26);
+            this.button10.TabIndex = 34;
+            this.button10.Text = "Generar Excel";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -762,7 +851,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.textBox4);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Location = new System.Drawing.Point(492, 12);
+            this.panel6.Location = new System.Drawing.Point(394, 12);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(192, 45);
             this.panel6.TabIndex = 38;
@@ -770,9 +859,9 @@
             // comboBox8
             // 
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(231, 14);
+            this.comboBox8.Location = new System.Drawing.Point(1154, 11);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 21);
+            this.comboBox8.Size = new System.Drawing.Size(28, 21);
             this.comboBox8.TabIndex = 39;
             this.comboBox8.Visible = false;
             this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
@@ -821,7 +910,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1013, 408);
+            this.label19.Location = new System.Drawing.Point(918, 461);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(158, 25);
             this.label19.TabIndex = 42;
@@ -830,52 +919,143 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 44);
+            this.label20.Location = new System.Drawing.Point(12, 9);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(376, 13);
             this.label20.TabIndex = 43;
             this.label20.Text = "Presionar \"Enter\" en el campo \"RUT\" para comprobar la existencia de cliente ";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.panel3);
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.button5);
-            this.panel7.Controls.Add(this.panel1);
-            this.panel7.Controls.Add(this.button8);
-            this.panel7.Controls.Add(this.panel4);
-            this.panel7.Location = new System.Drawing.Point(331, 408);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(525, 173);
-            this.panel7.TabIndex = 44;
             // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.label2);
+            this.panel8.Controls.Add(this.panel3);
             this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.button2);
             this.panel8.Controls.Add(this.textBox1);
             this.panel8.Controls.Add(this.textBox2);
             this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.comboBox1);
-            this.panel8.Location = new System.Drawing.Point(15, 70);
+            this.panel8.Location = new System.Drawing.Point(12, 25);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(313, 97);
+            this.panel8.Size = new System.Drawing.Size(313, 181);
             this.panel8.TabIndex = 45;
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.textBox11);
+            this.panel7.Controls.Add(this.label22);
+            this.panel7.Location = new System.Drawing.Point(592, 12);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(192, 45);
+            this.panel7.TabIndex = 39;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(47, 17);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 20);
+            this.textBox11.TabIndex = 0;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(53, 1);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(78, 13);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Consulta Lugar";
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Location = new System.Drawing.Point(1225, 677);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(119, 20);
+            this.comboBox12.TabIndex = 46;
+            this.comboBox12.Visible = false;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Enabled = false;
+            this.textBox12.Location = new System.Drawing.Point(328, 25);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(58, 20);
+            this.textBox12.TabIndex = 47;
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.button13);
+            this.panel9.Controls.Add(this.button12);
+            this.panel9.Controls.Add(this.button11);
+            this.panel9.Location = new System.Drawing.Point(821, 12);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(302, 51);
+            this.panel9.TabIndex = 48;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(214, 14);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 51;
+            this.button13.Text = "Contacto";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(111, 14);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 50;
+            this.button12.Text = "Lugar";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(3, 14);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 49;
+            this.button11.Text = "Cliente";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(944, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(50, 13);
+            this.label23.TabIndex = 49;
+            this.label23.Text = "Modificar";
             // 
             // IngresarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 657);
-            this.Controls.Add(this.panel8);
+            this.ClientSize = new System.Drawing.Size(1348, 709);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.comboBox12);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label20);
+            this.Controls.Add(this.comboBox9);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -886,21 +1066,20 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "IngresarClientes";
-            this.Text = "IngresarClientes";
+            this.Text = "Control Clientes y Lugar de tratamiento";
             this.Load += new System.EventHandler(this.IngresarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -912,9 +1091,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource3)).EndInit();
-            this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -947,7 +1128,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
@@ -962,10 +1142,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clasificacion;
         public System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label15;
@@ -973,29 +1149,15 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreLugar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RutCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Plano;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RutaOrigen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lugar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreContacto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoContacto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlanodeLugar;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label1;
@@ -1006,7 +1168,40 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clasificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreLugar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RutCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plano;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RutaOrigen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lugar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreContacto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoContacto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlanodeLugar;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox11;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label22;
+        public System.Windows.Forms.ComboBox comboBox12;
+        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label23;
     }
 }

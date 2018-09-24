@@ -6,32 +6,30 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class Estado
+    public class Estado
     {
-           int cod;
-       string estado;
-       int pericod;
+        int cod;
+        string estado;
+        int pericod;
 
 
 
-       public Estado(string estado, int pericod)
-          
-       {
+        public Estado(string estado, int pericod)
+        {
 
-           this.ESTADO = estado;
-           this.PERICOD = pericod;
+            this.ESTADO = estado;
+            this.PERICOD = pericod;
 
 
-       }
-       public Estado(int cod, string estado, int pericod)
-           
- {
-     this.COD = cod;
-     this.ESTADO=estado;
-     this.PERICOD = pericod; 
-     
+        }
+        public Estado(int cod, string estado, int pericod)
+        {
+            this.COD = cod;
+            this.ESTADO = estado;
+            this.PERICOD = pericod;
 
- }
+
+        }
 
         public int COD
         {
@@ -39,7 +37,7 @@ namespace Project.BussinessRules
             set { cod = value; }
         }
 
-          public string ESTADO
+        public string ESTADO
         {
             get { return estado; }
             set { estado = value; }
@@ -53,5 +51,5 @@ namespace Project.BussinessRules
     }
 
 
-    }
+}
 

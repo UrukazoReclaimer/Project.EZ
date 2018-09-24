@@ -44,15 +44,16 @@ namespace Project.DataAccess
             this.command.CommandText = mysql;
         }
 
-        public void CreataCommandPA(string mysql)
+        public void CreateCommandPA(string mysql)
         {
             this.command = factory.CreateCommand();
             this.command.Connection = connection;
             this.command.CommandType = CommandType.StoredProcedure;
             this.command.CommandText = mysql;
+            
         }
 
-   
+     
 
         public DbDataReader Query()
         {

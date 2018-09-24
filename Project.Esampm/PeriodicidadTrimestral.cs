@@ -19,20 +19,20 @@ namespace Project.Esampm
         List<int> list2 = new List<int>();
         List<int> list3 = new List<int>();
 
-        List<int> lista = new List<int>();
-        List<int> lista1 = new List<int>();
-        List<int> lista2 = new List<int>();
-        List<int> lista3 = new List<int>();
+        List<string> lista = new List<string>();
+        List<string> lista1 = new List<string>();
+        List<string> lista2 = new List<string>();
+        List<string> lista3 = new List<string>();
         public PeriodicidadTrimestral()
         {
             InitializeComponent();
 
 
             catalogoTecnico tunits = new catalogoTecnico();
-            List<Project.BussinessRules.Tecnico> tec = tunits.gettec();
-            List<Project.BussinessRules.Tecnico> tec1 = tunits.gettec();
-            List<Project.BussinessRules.Tecnico> tec2 = tunits.gettec();
-            List<Project.BussinessRules.Tecnico> tec3 = tunits.gettec();
+            List<Project.BussinessRules.Tecnico> tec = tunits.obtenertec();
+            List<Project.BussinessRules.Tecnico> tec1 = tunits.obtenertec();
+            List<Project.BussinessRules.Tecnico> tec2 = tunits.obtenertec();
+            List<Project.BussinessRules.Tecnico> tec3 = tunits.obtenertec();
             this.comboBox2.DataSource = tec;
             this.comboBox2.DisplayMember = "nombre";
             this.comboBox2.ValueMember = "cod";
@@ -99,6 +99,24 @@ namespace Project.Esampm
 
         private void PeriodicidadTrimestral_Load(object sender, EventArgs e)
         {
+            dateTimePicker4.Format = DateTimePickerFormat.Custom;
+            dateTimePicker4.CustomFormat = "dd-MM-yyyy";
+            DateTime fecha = new DateTime();
+            int day = fecha.Day;
+            int month = fecha.Month;
+            int year = Convert.ToInt32(textBox2.Text);
+            dateTimePicker4.Value = new DateTime(year, month, day);
+
+
+            dateTimePicker3.Format = DateTimePickerFormat.Custom;
+            dateTimePicker3.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker3.Value = new DateTime(year, 4, day);
+            dateTimePicker2.Value = new DateTime(year, 7, day);
+            dateTimePicker1.Value = new DateTime(year, 10, day);
 
         }
 
@@ -169,7 +187,7 @@ namespace Project.Esampm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            /*
             if (dateTimePicker4.Value.Date <= DateTime.Now || dateTimePicker3.Value.Date <= DateTime.Now || dateTimePicker2.Value.Date <= DateTime.Now || dateTimePicker1.Value.Date <= DateTime.Now)
             {
                 MessageBox.Show("No se puede guardar fechas anteriores a la fecha actual");
@@ -178,212 +196,164 @@ namespace Project.Esampm
             }
             else
             {
-             
-            
-                if (MessageBox.Show("Verifico la fechas a guardar?", "ATENCION",
-                  MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                  == DialogResult.Yes)
+             */
+
+            if (MessageBox.Show("¿Verifico la fechas a guardar?", "ATENCION",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+              == DialogResult.Yes)
+            {
+                CatalogoPlanilla ca = new CatalogoPlanilla();
+                List<Periodicidad> lu = ca.getcodfech();
+                this.comboBox1.DataSource = lu;
+                this.comboBox1.DisplayMember = "lugartratamiento";
+
+                this.comboBox1.ValueMember = "cod";
+
+
+
+
+                int index = 0;
+
+
+                for (int j = list3.Count - 1; j >= 0; j--)
                 {
-                    CatalogoPlanilla ca = new CatalogoPlanilla();
-                    List<Periodicidad> lu = ca.getcodfech();
-                    this.comboBox1.DataSource = lu;
-                    this.comboBox1.DisplayMember = "lugartratamiento";
 
-                    this.comboBox1.ValueMember = "cod";
-
-
-
-
-                    int index = 0;
-                    int index1 = 0;
-
-                    for (int j = list3.Count - 1; j >= 0; j--)
+                    string a = "";
+                    a = list3[index].ToString();
+                    if (lista3.Count != 0)
                     {
-
-                        string a = "";
-                        a = list3[index].ToString();
-                        if (lista3.Count != 0)
-                        {
-                            for (int i = lista3.Count - 1; i >= 0; i--)
-                            {
-                                dateTimePicker1.Format = DateTimePickerFormat.Custom;
-
-                                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-                                string b = "";
-                                b = lista3[index1].ToString();
-                                Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox8.SelectedValue), Convert.ToInt32(b), "", 0, "TMT", "P", "");
-                                ca.addfecha(pla);
-
-                                if (index1 < lista3.Count - 1)
-                                {
-
-                                    index1++;
-                                }
-                                else
-                                {
-                                    index1 = index1;
-                                }
-
-
-                            }
-                            index1 = 0;
-                            index++;
-                        }
-                        else
-                        {
+                      
                             dateTimePicker1.Format = DateTimePickerFormat.Custom;
 
                             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-                            Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox8.SelectedValue), 30, "", 0, "TMT", "P", "");
+                            string b = "";
+                            b = string.Join(",", lista3.ToArray());
+                            Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox8.SelectedValue), b, "", 0, "TMT", "P", "", "Primario", "", "");
                             ca.addfecha(pla);
-                        }
+        
+                        index++;
                     }
-                    index = 0;
-                    index1 = 0;
-
-
-                    for (int j = list2.Count - 1; j >= 0; j--)
+                    else
                     {
+                        dateTimePicker1.Format = DateTimePickerFormat.Custom;
 
-                        string a = "";
-                        a = list2[index].ToString();
-                        if (lista2.Count != 0)
-                        {
-                            for (int i = lista2.Count - 1; i >= 0; i--)
-                            {
-                                dateTimePicker2.Format = DateTimePickerFormat.Custom;
-
-                                dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-                                string b = "";
-                                b = lista2[index1].ToString();
-                                Periodicidad pla = new Periodicidad(dateTimePicker2.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox6.SelectedValue), Convert.ToInt32(b), "", 0, "TMT", "P", "");
-                                ca.addfecha(pla);
-
-                                if (index1 < lista2.Count - 1)
-                                {
-
-                                    index1++;
-                                }
-                                else
-                                {
-                                    index1 = index1;
-                                }
+                        dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                        Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox8.SelectedValue), "N/A", "", 0, "TMT", "P", "", "Primario", "", "");
+                        ca.addfecha(pla);
+                       
+                        index++;
+                    }
+                }
+                index = 0;
+              
 
 
-                            }
-                            index1 = 0;
-                            index++;
-                        }
-                        else
-                        {
+                for (int j = list2.Count - 1; j >= 0; j--)
+                {
+
+                    string a = "";
+                    a = list2[index].ToString();
+                    if (lista2.Count != 0)
+                    {
+                       
                             dateTimePicker2.Format = DateTimePickerFormat.Custom;
 
                             dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-                            Periodicidad pla = new Periodicidad(dateTimePicker2.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox6.SelectedValue), 30, "", 0, "TMT", "P", "");
+                            string b = "";
+                            b = string.Join(",", lista2.ToArray());
+                            Periodicidad pla = new Periodicidad(dateTimePicker2.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox6.SelectedValue), b, "", 0, "TMT", "P", "", "Primario", "", "");
                             ca.addfecha(pla);
-                        }
+           
+                        index++;
                     }
-                    index = 0;
-                    index1 = 0;
-
-
-
-
-
-                    for (int j = list.Count - 1; j >= 0; j--)
+                    else
                     {
+                        dateTimePicker2.Format = DateTimePickerFormat.Custom;
 
-                        string a = "";
-                        a = list[index].ToString();
-                        if (lista.Count != 0)
-                        {
-                            for (int i = lista.Count - 1; i >= 0; i--)
-                            {
-                                dateTimePicker4.Format = DateTimePickerFormat.Custom;
+                        dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+                        Periodicidad pla = new Periodicidad(dateTimePicker2.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox6.SelectedValue), "N/A", "", 0, "TMT", "P", "", "Primario", "", "");
+                        ca.addfecha(pla);
+                       
+                        index++;
+                    }
+                }
+                index = 0;
+  
 
-                                dateTimePicker4.CustomFormat = "yyyy-MM-dd";
-                                string b = "";
-                                b = lista[index1].ToString();
-                                Periodicidad pla = new Periodicidad(dateTimePicker4.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox2.SelectedValue), Convert.ToInt32(b), "", 0, "TMT", "P", "");
-                                ca.addfecha(pla);
+                for (int j = list.Count - 1; j >= 0; j--)
+                {
 
-                                if (index1 < lista.Count - 1)
-                                {
-
-                                    index1++;
-                                }
-                                else
-                                {
-                                    index1 = index1;
-                                }
-
-
-                            }
-                            index1 = 0;
-                            index++;
-                        }
-                        else
-                        {
+                    string a = "";
+                    a = list[index].ToString();
+                    if (lista.Count != 0)
+                    {
+                       
                             dateTimePicker4.Format = DateTimePickerFormat.Custom;
 
                             dateTimePicker4.CustomFormat = "yyyy-MM-dd";
-                            Periodicidad pla = new Periodicidad(dateTimePicker4.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox2.SelectedValue), 30, "", 0, "TMT", "P", "");
+                            string b = "";
+                            b = string.Join(",", lista.ToArray());
+                            Periodicidad pla = new Periodicidad(dateTimePicker4.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox2.SelectedValue), b, "", 0, "TMT", "P", "", "Primario", "", "");
                             ca.addfecha(pla);
-                        }
+
+                         
+                        index++;
                     }
-                    index = 0;
-                    index1 = 0;
-
-
-
-                    for (int j = list1.Count - 1; j >= 0; j--)
+                    else
                     {
+                        dateTimePicker4.Format = DateTimePickerFormat.Custom;
 
-                        string a = "";
-                        a = list1[index].ToString();
-                        if (lista1.Count != 0)
-                        {
-                            for (int i = lista1.Count - 1; i >= 0; i--)
-                            {
-                                dateTimePicker3.Format = DateTimePickerFormat.Custom;
-
-                                dateTimePicker3.CustomFormat = "yyyy-MM-dd";
-                                string b = "";
-                                b = lista1[index1].ToString();
-                                Periodicidad pla = new Periodicidad(dateTimePicker3.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox4.SelectedValue), Convert.ToInt32(b), "", 0, "TMT", "P", "");
-                                ca.addfecha(pla);
-
-                                if (index1 < lista1.Count - 1)
-                                {
-
-                                    index1++;
-                                }
-                                else
-                                {
-                                    index1 = index1;
-                                }
+                        dateTimePicker4.CustomFormat = "yyyy-MM-dd";
+                        Periodicidad pla = new Periodicidad(dateTimePicker4.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox2.SelectedValue), "N/A", "", 0, "TMT", "P", "", "Primario", "", "");
+                        ca.addfecha(pla);
+                        
+                        index++;
+                    }
+                }
+                index = 0;
+              
 
 
-                            }
-                            index1 = 0;
-                            index++;
-                        }
-                        else
-                        {
+
+                for (int j = list1.Count - 1; j >= 0; j--)
+                {
+
+                    string a = "";
+                    a = list1[index].ToString();
+                    if (lista1.Count != 0)
+                    {
+                       
                             dateTimePicker3.Format = DateTimePickerFormat.Custom;
 
                             dateTimePicker3.CustomFormat = "yyyy-MM-dd";
-                            Periodicidad pla = new Periodicidad(dateTimePicker3.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox4.SelectedValue), 30, "", 0, "TMT", "P", "");
+                            string b = "";
+                            b = string.Join(",", lista1.ToArray());
+                            Periodicidad pla = new Periodicidad(dateTimePicker3.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox4.SelectedValue), b, "", 0, "TMT", "P", "", "Primario", "", "");
                             ca.addfecha(pla);
-                        }
-                    }
-                    index = 0;
-                    index1 = 0;
 
+
+                    
+                        index++;
+                    }
+                    else
+                    {
+                        dateTimePicker3.Format = DateTimePickerFormat.Custom;
+
+                        dateTimePicker3.CustomFormat = "yyyy-MM-dd";
+                        Periodicidad pla = new Periodicidad(dateTimePicker3.Text, Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(a), Convert.ToInt32(comboBox4.SelectedValue), "N/A", "", 0, "TMT", "P", "", "Primario", "", "");
+                        ca.addfecha(pla);
+                       
+                        index++;
+                    }
                 }
+                index = 0;
+               
+
+                 // }
                 MessageBox.Show("Ingreso Completado");
                 this.Close();
             }
+             
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -410,14 +380,17 @@ namespace Project.Esampm
         {
             if (registro == true)
             {
+                if (comboBox13.Text == "Seleccionados")
+                {
+                    comboBox13.Text = "";
 
-                int index = Convert.ToInt32(comboBox12.SelectedValue);
-                comboBox12.SelectedValue = index;
+                }
 
-
+                comboBox13.Text = comboBox12.Text;
+                string b = comboBox13.Text;
                 comboBox13.Items.Add(comboBox12.Text);
 
-                lista.Add(index);
+                lista.Add(comboBox13.Text);
             }
         }
 
@@ -426,14 +399,19 @@ namespace Project.Esampm
             if (registro == true)
             {
 
-                int index = Convert.ToInt32(comboBox15.SelectedValue);
-                comboBox15.SelectedValue = index;
+                  if (comboBox14.Text == "Seleccionados")
+                {
+                    comboBox14.Text = "";
 
+                }
 
+                comboBox14.Text = comboBox15.Text;
+                string b = comboBox14.Text;
                 comboBox14.Items.Add(comboBox15.Text);
 
-                lista1.Add(index);
+                lista1.Add(comboBox14.Text);
             }
+            
         }
 
         private void comboBox17_SelectedIndexChanged(object sender, EventArgs e)
@@ -441,13 +419,17 @@ namespace Project.Esampm
             if (registro == true)
             {
 
-                int index = Convert.ToInt32(comboBox17.SelectedValue);
-                comboBox17.SelectedValue = index;
+                if (comboBox18.Text == "Seleccionados")
+                {
+                    comboBox18.Text = "";
 
+                }
 
+                comboBox18.Text = comboBox17.Text;
+                string b = comboBox18.Text;
                 comboBox18.Items.Add(comboBox17.Text);
 
-                lista2.Add(index);
+                lista2.Add(comboBox18.Text);
             }
         }
 
@@ -456,13 +438,17 @@ namespace Project.Esampm
             if (registro == true)
             {
 
-                int index = Convert.ToInt32(comboBox20.SelectedValue);
-                comboBox20.SelectedValue = index;
+                if (comboBox21.Text == "Seleccionados")
+                {
+                    comboBox12.Text = "";
 
+                }
 
+                comboBox21.Text = comboBox20.Text;
+                string b = comboBox21.Text;
                 comboBox21.Items.Add(comboBox20.Text);
 
-                lista3.Add(index);
+                lista3.Add(comboBox21.Text);
             }
         }
 
@@ -517,6 +503,16 @@ namespace Project.Esampm
         }
 
         private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

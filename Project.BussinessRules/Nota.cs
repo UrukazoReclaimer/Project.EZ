@@ -13,12 +13,12 @@ namespace Project.BussinessRules
         string contenido;
         string responsable;
 
-        public Nota(string cod,string contenido, string responsable)
+        public Nota(string cod, string contenido, string responsable)
         {
-            this.COD= cod;
+            this.COD = cod;
             this.CONTENIDO = contenido;
             this.RESPONSABLE = responsable;
-        
+
         }
         public Nota(string cod, string contenido, string responsable, string codpla)
         {
@@ -27,30 +27,37 @@ namespace Project.BussinessRules
             this.RESPONSABLE = responsable;
 
         }
+        public Nota(string contenido)
+        {
+          
+            this.CONTENIDO = contenido;
+          
 
-   
-            public string COD
+        }
+
+
+        public string COD
         {
             get { return cod; }
             set { cod = value; }
         }
 
-            public string CONTENIDO
-            {
-                get { return contenido; }
-                set { contenido = value; }
-            }
-            public string RESPONSABLE
-            {
-                get { return responsable; }
-                set { responsable = value; }
-            }
+        public string CONTENIDO
+        {
+            get { return contenido; }
+            set { contenido = value; }
+        }
+        public string RESPONSABLE
+        {
+            get { return responsable; }
+            set { responsable = value; }
+        }
 
-            public string CODPLA
-            {
-                get { return codpla; }
-                set { codpla = value; }
-            }
+        public string CODPLA
+        {
+            get { return codpla; }
+            set { codpla = value; }
+        }
 
     }
 }

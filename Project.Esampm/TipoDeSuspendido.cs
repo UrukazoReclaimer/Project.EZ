@@ -15,6 +15,8 @@ namespace Project.Esampm
         public TipoDeSuspendido()
         {
             InitializeComponent();
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
         }
 
         private void TipoDeSuspendido_Load(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace Project.Esampm
             MessageBox.Show("Seleccionar solicitante de suspensión");
 
             Suspendido rd = new Suspendido();
+
             rd.comboBox1.DisplayMember = comboBox2.DisplayMember;
             rd.comboBox1.ValueMember = comboBox2.ValueMember;
             rd.comboBox1.DataSource = comboBox2.DataSource;
@@ -40,9 +43,19 @@ namespace Project.Esampm
             MessageBox.Show("Seleccionar solicitante de suspensión");
 
             SuspendidoTotal rd = new SuspendidoTotal();
- 
-            rd.comboBox1.Text = comboBox1.Text;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            rd.comboBox1.DisplayMember = comboBox2.DisplayMember;
+            rd.comboBox1.ValueMember = comboBox2.ValueMember;
+            rd.comboBox1.DataSource = comboBox2.DataSource;
+        //    rd.comboBox2.DisplayMember = comboBox1.DisplayMember;
+        //    rd.comboBox2.ValueMember = comboBox1.ValueMember;
+        //    rd.comboBox2.DataSource = comboBox1.DataSource;
+            rd.comboBox2.Text = comboBox1.Text;
+            rd.comboBox2.Items.Add(comboBox1.Text);
+          
             rd.dateTimePicker1.Text = dateTimePicker1.Text;
+            rd.textBox2.Text = textBox1.Text;
             rd.Show();
             this.Close();
         }

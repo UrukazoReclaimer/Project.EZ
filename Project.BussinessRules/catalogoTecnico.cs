@@ -9,16 +9,16 @@ using Project.DataAccess;
 
 namespace Project.BussinessRules
 {
- public class catalogoTecnico
+    public class catalogoTecnico
     {
 
-         public void addTecnico(Tecnico ac)
+        public void addTecnico(Tecnico ac)
         {
             try
             {
                 DataBase bd = new DataBase();
                 bd.connect();
-                string sql = "insert into tecnicos values('"+ac.Cod+"','"+ac.Rut+"','"+ac.Nombre+"','"+ac.Estado+"')";
+                string sql = "insert into tecnicos values('" + ac.Cod + "','" + ac.Rut + "','" + ac.Nombre + "','" + ac.Estado + "')";
                 bd.CreateCommand(sql);
                 bd.execute();
                 bd.close();
@@ -30,81 +30,81 @@ namespace Project.BussinessRules
         }
 
 
-         public List<Tecnico> gettec()
-         {
+        public List<Tecnico> obtenertec()
+        {
 
             DataBase bd = new DataBase();
-             bd.connect();
-             List<Tecnico> units = new List<Tecnico>();
-             string sql = "select * from tecnicos where tecnicos.Estado='Activo'";
-             bd.CreateCommand(sql);
+            bd.connect();
+            List<Tecnico> units = new List<Tecnico>();
+            string sql = "select * from tecnicos where tecnicos.Estado='Activo'";
+            bd.CreateCommand(sql);
 
-             DbDataReader result = bd.Query();
+            DbDataReader result = bd.Query();
 
-             while (result.Read())
-             {
-                 Tecnico u = new Tecnico(int.Parse(result.GetString(0)), result.GetString(2));
-                 units.Add(u);
+            while (result.Read())
+            {
+                Tecnico u = new Tecnico(int.Parse(result.GetString(0)), result.GetString(2));
+                units.Add(u);
 
-             }
-             result.Close();
-             bd.close();
-             return units;
-            
-         }
+            }
+            result.Close();
+            bd.close();
+            return units;
 
-
-
-         public void removeTecnico(string rut)
-         {
-
-             DataBase db = new DataBase();
-
-             db.connect();
-
-             string sql = "delete from tecnicos WHERE RUT ='" + rut + "'";
-
-             db.CreateCommand(sql);
-
-             db.execute();
-
-             db.close();
+        }
 
 
 
-         }
+        public void removeTecnico(string rut)
+        {
+
+            DataBase db = new DataBase();
+
+            db.connect();
+
+            string sql = "delete from tecnicos WHERE RUT ='" + rut + "'";
+
+            db.CreateCommand(sql);
+
+            db.execute();
+
+            db.close();
 
 
-         public void modiTec(Tecnico ad)
-         {
+
+        }
 
 
-             try
-             {
+        public void modiTec(Tecnico ad)
+        {
 
-                 DataBase db = new DataBase();
-                 db.connect();
-                 string sql = "update tecnicos set cod='" + ad.Cod + "',rut='" + ad.Rut + "',nombre='" + ad.Nombre + "',estado='" + ad.Estado + "'where cod='" + ad.Cod + "';";
 
-                 db.CreateCommand(sql);
+            try
+            {
 
-                 db.execute();
-                 db.close();
-             }
-             catch (DataAccess.DataAccessException ex)
-             {
-                 throw new BussinessRulesException(ex.Message, ex.InnerException);
+                DataBase db = new DataBase();
+                db.connect();
+                string sql = "update tecnicos set cod='" + ad.Cod + "',rut='" + ad.Rut + "',nombre='" + ad.Nombre + "',estado='" + ad.Estado + "'where cod='" + ad.Cod + "';";
 
-             }
-             catch (Exception ex)
-             {
+                db.CreateCommand(sql);
 
-                 throw new BussinessRulesException(ex.Message);
-             }
+                db.execute();
+                db.close();
+            }
+            catch (DataAccess.DataAccessException ex)
+            {
+                throw new BussinessRulesException(ex.Message, ex.InnerException);
 
-         }
+            }
+            catch (Exception ex)
+            {
 
-             
+                throw new BussinessRulesException(ex.Message);
+            }
+
+        }
+
+
         public List<Tecnico> mostrarTec(string s)
         {
             try
@@ -122,14 +122,14 @@ namespace Project.BussinessRules
 
                 while (result.Read())
                 {
-                    
-                    int cod = result.GetInt32(0);   
+
+                    int cod = result.GetInt32(0);
                     string rut = result.GetString(1);
                     string nombre = result.GetString(2);
                     string estado = result.GetString(3);
-                    
-                    
-                    Tecnico  a= new Tecnico(cod,rut,nombre,estado);
+
+
+                    Tecnico a = new Tecnico(cod, rut, nombre, estado);
                     tec.Add(a);
                 }
 
@@ -146,7 +146,30 @@ namespace Project.BussinessRules
                 throw new BussinessRulesException(ex.Message);
             }
         }
- }
-         }
-    
+        public List<Tecnico> gettecrutcondition(string s)
+        {
+
+            DataAccess.DataBase bd = new DataBase();
+            bd.connect();
+            List<Tecnico> units = new List<Tecnico>();
+            string sql = "select * from tecnicos  where rut='" + s + "'";
+            bd.CreateCommand(sql);
+
+            DbDataReader result = bd.Query();
+
+            while (result.Read())
+            {
+                Tecnico u = new Tecnico(result.GetString(0), result.GetString(1));
+                units.Add(u);
+
+            }
+            result.Close();
+            bd.close();
+            return units;
+
+        }
+
+    }
+}
+
 

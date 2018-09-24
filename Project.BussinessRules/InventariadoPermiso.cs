@@ -9,19 +9,13 @@ namespace Project.BussinessRules
    public class InventariadoPermiso
     {
 
-        string cod;
-        string rut;
+      
         string tec;
-        string ser;
-        string consumo;
-        string cli;
-        string lugartratamiento;
-        string area;
+        
         DateTime fecha;
-        string descripcion;
+     
         string tipo;
-        string ruta;
-        string descripcionparticular;
+       
 
         public InventariadoPermiso(string tec,string tipo,DateTime fecha)
         {

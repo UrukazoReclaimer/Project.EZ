@@ -270,6 +270,7 @@
             this.label72 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox109 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -308,8 +309,8 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Location = new System.Drawing.Point(12, 24);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 114);
-            this.panel3.TabIndex = 22;
+            this.panel3.Size = new System.Drawing.Size(373, 114);
+            this.panel3.TabIndex = 1;
             // 
             // label73
             // 
@@ -344,7 +345,7 @@
             this.comboBox6.Location = new System.Drawing.Point(295, 76);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(65, 21);
-            this.comboBox6.TabIndex = 29;
+            this.comboBox6.TabIndex = 12;
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // comboBox5
@@ -353,7 +354,7 @@
             this.comboBox5.Location = new System.Drawing.Point(295, 50);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(65, 21);
-            this.comboBox5.TabIndex = 28;
+            this.comboBox5.TabIndex = 8;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // comboBox4
@@ -362,7 +363,7 @@
             this.comboBox4.Location = new System.Drawing.Point(224, 76);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(65, 21);
-            this.comboBox4.TabIndex = 27;
+            this.comboBox4.TabIndex = 11;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
@@ -371,7 +372,7 @@
             this.comboBox3.Location = new System.Drawing.Point(224, 50);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(65, 21);
-            this.comboBox3.TabIndex = 26;
+            this.comboBox3.TabIndex = 7;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox2
@@ -380,7 +381,7 @@
             this.comboBox2.Location = new System.Drawing.Point(136, 76);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(82, 21);
-            this.comboBox2.TabIndex = 25;
+            this.comboBox2.TabIndex = 10;
             // 
             // comboBox1
             // 
@@ -388,7 +389,7 @@
             this.comboBox1.Location = new System.Drawing.Point(136, 51);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(82, 21);
-            this.comboBox1.TabIndex = 24;
+            this.comboBox1.TabIndex = 6;
             // 
             // dateTimePicker3
             // 
@@ -397,7 +398,7 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(48, 77);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker3.TabIndex = 23;
+            this.dateTimePicker3.TabIndex = 9;
             this.dateTimePicker3.Value = new System.DateTime(2016, 1, 30, 0, 0, 0, 0);
             // 
             // dateTimePicker1
@@ -407,7 +408,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(48, 51);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2016, 1, 15, 0, 0, 0, 0);
             // 
             // label8
@@ -417,7 +418,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Area";
+            this.label8.Text = "Área";
             // 
             // comboBox9
             // 
@@ -425,7 +426,7 @@
             this.comboBox9.Location = new System.Drawing.Point(295, 25);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(65, 21);
-            this.comboBox9.TabIndex = 19;
+            this.comboBox9.TabIndex = 4;
             this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // label9
@@ -444,7 +445,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 12;
-            this.label10.Text = "Tecnico";
+            this.label10.Text = "Técnico";
             // 
             // comboBox14
             // 
@@ -452,7 +453,7 @@
             this.comboBox14.Location = new System.Drawing.Point(224, 25);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(65, 21);
-            this.comboBox14.TabIndex = 16;
+            this.comboBox14.TabIndex = 3;
             this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
             // 
             // comboBox15
@@ -461,7 +462,7 @@
             this.comboBox15.Location = new System.Drawing.Point(136, 25);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(82, 21);
-            this.comboBox15.TabIndex = 15;
+            this.comboBox15.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
@@ -470,7 +471,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(48, 25);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker2.TabIndex = 14;
+            this.dateTimePicker2.TabIndex = 1;
             this.dateTimePicker2.Value = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
             // 
             // label12
@@ -506,8 +507,8 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(12, 144);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 114);
-            this.panel1.TabIndex = 32;
+            this.panel1.Size = new System.Drawing.Size(373, 114);
+            this.panel1.TabIndex = 2;
             // 
             // label74
             // 
@@ -615,7 +616,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Area";
+            this.label5.Text = "Área";
             // 
             // comboBox16
             // 
@@ -642,7 +643,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Tecnico";
+            this.label7.Text = "Técnico";
             // 
             // comboBox17
             // 
@@ -704,8 +705,8 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Location = new System.Drawing.Point(12, 264);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(370, 114);
-            this.panel2.TabIndex = 33;
+            this.panel2.Size = new System.Drawing.Size(373, 114);
+            this.panel2.TabIndex = 3;
             // 
             // label75
             // 
@@ -813,7 +814,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 13);
             this.label15.TabIndex = 21;
-            this.label15.Text = "Area";
+            this.label15.Text = "Área";
             // 
             // comboBox25
             // 
@@ -840,7 +841,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(46, 13);
             this.label17.TabIndex = 12;
-            this.label17.Text = "Tecnico";
+            this.label17.Text = "Técnico";
             // 
             // comboBox26
             // 
@@ -902,8 +903,8 @@
             this.panel4.Controls.Add(this.label24);
             this.panel4.Location = new System.Drawing.Point(12, 384);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(370, 114);
-            this.panel4.TabIndex = 34;
+            this.panel4.Size = new System.Drawing.Size(373, 114);
+            this.panel4.TabIndex = 4;
             // 
             // label76
             // 
@@ -1011,7 +1012,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(29, 13);
             this.label21.TabIndex = 21;
-            this.label21.Text = "Area";
+            this.label21.Text = "Área";
             // 
             // comboBox34
             // 
@@ -1038,7 +1039,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(46, 13);
             this.label23.TabIndex = 12;
-            this.label23.Text = "Tecnico";
+            this.label23.Text = "Técnico";
             // 
             // comboBox35
             // 
@@ -1100,8 +1101,8 @@
             this.panel5.Controls.Add(this.label30);
             this.panel5.Location = new System.Drawing.Point(12, 504);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(370, 114);
-            this.panel5.TabIndex = 35;
+            this.panel5.Size = new System.Drawing.Size(373, 114);
+            this.panel5.TabIndex = 5;
             // 
             // label77
             // 
@@ -1209,7 +1210,7 @@
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(29, 13);
             this.label27.TabIndex = 21;
-            this.label27.Text = "Area";
+            this.label27.Text = "Área";
             // 
             // comboBox43
             // 
@@ -1236,7 +1237,7 @@
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(46, 13);
             this.label29.TabIndex = 12;
-            this.label29.Text = "Tecnico";
+            this.label29.Text = "Técnico";
             // 
             // comboBox44
             // 
@@ -1298,8 +1299,8 @@
             this.panel6.Controls.Add(this.label36);
             this.panel6.Location = new System.Drawing.Point(12, 624);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(370, 114);
-            this.panel6.TabIndex = 36;
+            this.panel6.Size = new System.Drawing.Size(373, 114);
+            this.panel6.TabIndex = 6;
             // 
             // label78
             // 
@@ -1407,7 +1408,7 @@
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(29, 13);
             this.label33.TabIndex = 21;
-            this.label33.Text = "Area";
+            this.label33.Text = "Área";
             // 
             // comboBox52
             // 
@@ -1434,7 +1435,7 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(46, 13);
             this.label35.TabIndex = 12;
-            this.label35.Text = "Tecnico";
+            this.label35.Text = "Técnico";
             // 
             // comboBox53
             // 
@@ -1494,10 +1495,10 @@
             this.panel7.Controls.Add(this.comboBox63);
             this.panel7.Controls.Add(this.dateTimePicker21);
             this.panel7.Controls.Add(this.label42);
-            this.panel7.Location = new System.Drawing.Point(388, 24);
+            this.panel7.Location = new System.Drawing.Point(391, 24);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(370, 114);
-            this.panel7.TabIndex = 32;
+            this.panel7.Size = new System.Drawing.Size(372, 114);
+            this.panel7.TabIndex = 7;
             // 
             // label79
             // 
@@ -1605,7 +1606,7 @@
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(29, 13);
             this.label39.TabIndex = 21;
-            this.label39.Text = "Area";
+            this.label39.Text = "Área";
             // 
             // comboBox61
             // 
@@ -1632,7 +1633,7 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(46, 13);
             this.label41.TabIndex = 12;
-            this.label41.Text = "Tecnico";
+            this.label41.Text = "Técnico";
             // 
             // comboBox62
             // 
@@ -1692,10 +1693,10 @@
             this.panel8.Controls.Add(this.comboBox72);
             this.panel8.Controls.Add(this.dateTimePicker24);
             this.panel8.Controls.Add(this.label48);
-            this.panel8.Location = new System.Drawing.Point(388, 144);
+            this.panel8.Location = new System.Drawing.Point(391, 144);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(370, 114);
-            this.panel8.TabIndex = 33;
+            this.panel8.Size = new System.Drawing.Size(372, 114);
+            this.panel8.TabIndex = 8;
             // 
             // label80
             // 
@@ -1803,7 +1804,7 @@
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(29, 13);
             this.label45.TabIndex = 21;
-            this.label45.Text = "Area";
+            this.label45.Text = "Área";
             // 
             // comboBox70
             // 
@@ -1830,7 +1831,7 @@
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(46, 13);
             this.label47.TabIndex = 12;
-            this.label47.Text = "Tecnico";
+            this.label47.Text = "Técnico";
             // 
             // comboBox71
             // 
@@ -1890,10 +1891,10 @@
             this.panel9.Controls.Add(this.comboBox81);
             this.panel9.Controls.Add(this.dateTimePicker27);
             this.panel9.Controls.Add(this.label54);
-            this.panel9.Location = new System.Drawing.Point(388, 264);
+            this.panel9.Location = new System.Drawing.Point(391, 264);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(370, 114);
-            this.panel9.TabIndex = 34;
+            this.panel9.Size = new System.Drawing.Size(372, 114);
+            this.panel9.TabIndex = 9;
             // 
             // label81
             // 
@@ -2001,7 +2002,7 @@
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(29, 13);
             this.label51.TabIndex = 21;
-            this.label51.Text = "Area";
+            this.label51.Text = "Área";
             // 
             // comboBox79
             // 
@@ -2028,7 +2029,7 @@
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(46, 13);
             this.label53.TabIndex = 12;
-            this.label53.Text = "Tecnico";
+            this.label53.Text = "Técnico";
             // 
             // comboBox80
             // 
@@ -2088,10 +2089,10 @@
             this.panel10.Controls.Add(this.comboBox90);
             this.panel10.Controls.Add(this.dateTimePicker30);
             this.panel10.Controls.Add(this.label60);
-            this.panel10.Location = new System.Drawing.Point(388, 384);
+            this.panel10.Location = new System.Drawing.Point(391, 384);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(370, 114);
-            this.panel10.TabIndex = 35;
+            this.panel10.Size = new System.Drawing.Size(372, 114);
+            this.panel10.TabIndex = 10;
             // 
             // label82
             // 
@@ -2199,7 +2200,7 @@
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(29, 13);
             this.label57.TabIndex = 21;
-            this.label57.Text = "Area";
+            this.label57.Text = "Área";
             // 
             // comboBox88
             // 
@@ -2226,7 +2227,7 @@
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(46, 13);
             this.label59.TabIndex = 12;
-            this.label59.Text = "Tecnico";
+            this.label59.Text = "Técnico";
             // 
             // comboBox89
             // 
@@ -2286,10 +2287,10 @@
             this.panel11.Controls.Add(this.comboBox99);
             this.panel11.Controls.Add(this.dateTimePicker33);
             this.panel11.Controls.Add(this.label66);
-            this.panel11.Location = new System.Drawing.Point(388, 504);
+            this.panel11.Location = new System.Drawing.Point(391, 504);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(370, 114);
-            this.panel11.TabIndex = 36;
+            this.panel11.Size = new System.Drawing.Size(372, 114);
+            this.panel11.TabIndex = 11;
             // 
             // label83
             // 
@@ -2397,7 +2398,7 @@
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(29, 13);
             this.label63.TabIndex = 21;
-            this.label63.Text = "Area";
+            this.label63.Text = "Área";
             // 
             // comboBox97
             // 
@@ -2424,7 +2425,7 @@
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(46, 13);
             this.label65.TabIndex = 12;
-            this.label65.Text = "Tecnico";
+            this.label65.Text = "Técnico";
             // 
             // comboBox98
             // 
@@ -2484,10 +2485,10 @@
             this.panel12.Controls.Add(this.comboBox108);
             this.panel12.Controls.Add(this.dateTimePicker36);
             this.panel12.Controls.Add(this.label72);
-            this.panel12.Location = new System.Drawing.Point(388, 624);
+            this.panel12.Location = new System.Drawing.Point(391, 624);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(370, 114);
-            this.panel12.TabIndex = 37;
+            this.panel12.Size = new System.Drawing.Size(372, 114);
+            this.panel12.TabIndex = 12;
             // 
             // label84
             // 
@@ -2595,7 +2596,7 @@
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(29, 13);
             this.label69.TabIndex = 21;
-            this.label69.Text = "Area";
+            this.label69.Text = "Área";
             // 
             // comboBox106
             // 
@@ -2622,7 +2623,7 @@
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(46, 13);
             this.label71.TabIndex = 12;
-            this.label71.Text = "Tecnico";
+            this.label71.Text = "Técnico";
             // 
             // comboBox107
             // 
@@ -2662,11 +2663,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(764, 24);
+            this.button1.Location = new System.Drawing.Point(769, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 47);
             this.button1.TabIndex = 38;
-            this.button1.Text = "Guardar Planificacion";
+            this.button1.Text = "Guardar Planificación";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -2674,18 +2675,26 @@
             // 
             this.comboBox109.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox109.FormattingEnabled = true;
-            this.comboBox109.Location = new System.Drawing.Point(764, 76);
+            this.comboBox109.Location = new System.Drawing.Point(769, 77);
             this.comboBox109.Name = "comboBox109";
             this.comboBox109.Size = new System.Drawing.Size(91, 21);
             this.comboBox109.TabIndex = 39;
             this.comboBox109.SelectedIndexChanged += new System.EventHandler(this.comboBox109_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(769, 104);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(91, 20);
+            this.textBox1.TabIndex = 40;
             // 
             // PeriodicidadTrimensual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(868, 555);
+            this.ClientSize = new System.Drawing.Size(880, 555);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox109);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel12);
@@ -2702,7 +2711,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "PeriodicidadTrimensual";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PeriodicidadTrimensual";
+            this.Text = "Periodicidad Trimensual";
             this.Load += new System.EventHandler(this.PeriodicidadTrimensual_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -2729,6 +2738,7 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2976,6 +2986,7 @@
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ComboBox comboBox109;
+        public System.Windows.Forms.TextBox textBox1;
 
 
     }

@@ -75,6 +75,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -96,7 +97,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 128);
+            this.panel1.Size = new System.Drawing.Size(238, 129);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -106,7 +107,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Area";
+            this.label11.Text = "Área";
             // 
             // comboBox13
             // 
@@ -116,6 +117,7 @@
             this.comboBox13.Size = new System.Drawing.Size(99, 21);
             this.comboBox13.TabIndex = 20;
             this.comboBox13.Text = "Seleccionados";
+            this.comboBox13.SelectedIndexChanged += new System.EventHandler(this.comboBox13_SelectedIndexChanged);
             // 
             // comboBox12
             // 
@@ -134,6 +136,7 @@
             this.comboBox11.Size = new System.Drawing.Size(99, 21);
             this.comboBox11.TabIndex = 18;
             this.comboBox11.Text = "Selecionados";
+            this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -151,7 +154,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Tecnico";
+            this.label2.Text = "Técnico";
             // 
             // comboBox3
             // 
@@ -204,7 +207,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(256, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 127);
+            this.panel2.Size = new System.Drawing.Size(238, 128);
             this.panel2.TabIndex = 2;
             // 
             // comboBox15
@@ -223,7 +226,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 23;
-            this.label12.Text = "Area";
+            this.label12.Text = "Área";
             // 
             // comboBox14
             // 
@@ -260,7 +263,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Tecnico";
+            this.label3.Text = "Técnico";
             // 
             // comboBox5
             // 
@@ -313,7 +316,7 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Location = new System.Drawing.Point(500, 24);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(238, 127);
+            this.panel4.Size = new System.Drawing.Size(238, 128);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -340,9 +343,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(5, 94);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 13);
+            this.label13.Size = new System.Drawing.Size(29, 13);
             this.label13.TabIndex = 22;
-            this.label13.Text = "Servicio";
+            this.label13.Text = "Área";
             // 
             // comboBox16
             // 
@@ -369,7 +372,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Tecnico";
+            this.label4.Text = "Técnico";
             // 
             // comboBox7
             // 
@@ -422,7 +425,7 @@
             this.panel6.Controls.Add(this.label21);
             this.panel6.Location = new System.Drawing.Point(744, 23);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(238, 128);
+            this.panel6.Size = new System.Drawing.Size(238, 129);
             this.panel6.TabIndex = 9;
             // 
             // comboBox21
@@ -450,7 +453,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 13);
             this.label14.TabIndex = 23;
-            this.label14.Text = "Area";
+            this.label14.Text = "Área";
             // 
             // comboBox19
             // 
@@ -477,7 +480,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Tecnico";
+            this.label5.Text = "Técnico";
             // 
             // comboBox9
             // 
@@ -519,7 +522,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(140, 162);
+            this.comboBox1.Location = new System.Drawing.Point(140, 158);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(99, 20);
             this.comboBox1.TabIndex = 10;
@@ -527,9 +530,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(47, 162);
+            this.button3.Location = new System.Drawing.Point(12, 158);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 51);
+            this.button3.Size = new System.Drawing.Size(122, 27);
             this.button3.TabIndex = 11;
             this.button3.Text = "Guardar Planificación";
             this.button3.UseVisualStyleBackColor = true;
@@ -538,17 +541,25 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(252, 162);
+            this.textBox1.Location = new System.Drawing.Point(245, 158);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(39, 20);
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = "TMT";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(290, 158);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 17;
+            // 
             // PeriodicidadTrimestral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 222);
+            this.ClientSize = new System.Drawing.Size(991, 196);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
@@ -558,7 +569,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PeriodicidadTrimestral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PeriodicidadTrimestral";
+            this.Text = "Periodicidad Trimestral";
             this.Load += new System.EventHandler(this.PeriodicidadTrimestral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -622,5 +633,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox19;
         private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
     }
 }

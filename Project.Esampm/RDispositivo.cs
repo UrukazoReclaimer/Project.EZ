@@ -26,9 +26,7 @@ namespace Project.Esampm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //   CatalogoNota not = new CatalogoNota();
-            //   Nota n = new Nota(comboBox1.Text,textBox1.Text,"Empresa---");
-            //  not.addNota(n);
+
 
 
             comboBox1.Text = Convert.ToString(comboBox1.SelectedValue);
@@ -40,7 +38,7 @@ namespace Project.Esampm
 
 
                 comboBox1.SelectedValue = indexo;
-                //comboBox4.Items.Add(index);
+
                 list.Add(indexo);
                 indexo++;
             }
@@ -54,15 +52,14 @@ namespace Project.Esampm
 
 
 
-            //  int selectedIndex = comboBox4.SelectedIndex;
-            //  string str = comboBox4.Items[selectedIndex].ToString();
+
             for (int i = comboBox1.Items.Count - 1; i >= 0; i--)
             {
                 a = "";
                 a = list[index].ToString();
-                //Periodicidad ot = new Periodicidad(Convert.ToInt32(comboBox4.Text),a);
+
                 Nota n = new Nota(comboBox1.Text, textBox1.Text, "Cliente---");
-                //catalogo.addOTI(ot);
+
                 not.addNota(n);
                 if (index1 < comboBox1.Items.Count - 1)
                 {
@@ -76,14 +73,13 @@ namespace Project.Esampm
                 }
 
             }
-            MessageBox.Show("Descripcion Guardada");
+            MessageBox.Show("Descripción Guardada");
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-         //   CatalogoNota not = new CatalogoNota();
-         //   Nota n = new Nota(comboBox1.Text,textBox1.Text,"Empresa---");
-          //  not.addNota(n);
+
 
 
             comboBox1.Text = Convert.ToString(comboBox1.SelectedValue);
@@ -109,15 +105,14 @@ namespace Project.Esampm
 
 
 
-            //  int selectedIndex = comboBox4.SelectedIndex;
-            //  string str = comboBox4.Items[selectedIndex].ToString();
+
             for (int i = comboBox1.Items.Count - 1; i >= 0; i--)
             {
                 a = "";
                 a = list[index].ToString();
-                //Periodicidad ot = new Periodicidad(Convert.ToInt32(comboBox4.Text),a);
+
                 Nota n = new Nota(comboBox1.Text, textBox1.Text, "Empresa---");
-                //catalogo.addOTI(ot);
+
                 not.addNota(n);
                 if (index1 < comboBox1.Items.Count - 1)
                 {
@@ -131,7 +126,8 @@ namespace Project.Esampm
                 }
 
             }
-            MessageBox.Show("Descrpcion Guardada");
+            MessageBox.Show("Descrpción Guardada");
+            this.Close();
 
         }
     }

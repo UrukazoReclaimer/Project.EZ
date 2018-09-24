@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Project.Esampm.exe" version="1.0.0.87" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Project.Esampm.exe" version="1.0.0.247" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Project.Esampm" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project.BussinessRules.dll" size="153600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project.BussinessRules.dll" size="286720">
       <assemblyIdentity name="Project.BussinessRules" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Z7xvc/U0uoyosfodOdyu3zWBA8Yw869pa+InesjEbYY=</dsig:DigestValue>
+        <dsig:DigestValue>uiuiBpzXh1xjS5bSNrT0PkD2pIxi1HkbvHWoES86DvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,29 +97,38 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eM+MrXRcmBvm9uh7YkNeQcUX7NDTs7D9XV/L/kxf1pM=</dsig:DigestValue>
+        <dsig:DigestValue>zc3ZRLQkXQieon8tWZfy4MJGvm1Eydp68+Cf5cvH7Hs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project.Esampm.exe" size="792576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project.Esampm.exe" size="3961856">
       <assemblyIdentity name="Project.Esampm" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IqUfZg02C4ImQNgOwmKnhEuLiXsDfeyQWIPpH2RYjLc=</dsig:DigestValue>
+        <dsig:DigestValue>KYVcZNnuk5VRE1sfkq8K7vxdp+hJgWTIEmTzVJpck6E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Project.Esampm.exe.config" size="1551">
+  <file name="home.ico" size="230270">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hy773CLEb+tMKFoqPxil/pH3mChvt6cPUCliLPEOE9Y=</dsig:DigestValue>
+      <dsig:DigestValue>LHn5NDwBks4GVCc0zNPXr/WVIf26Jl2xVT8yvxOXuTA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Project.Esampm.exe.config" size="1558">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+X9h9uNHivYjbtVzO9m82uSO8xwkEd5Z0ulsKxuYfU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -51,7 +51,7 @@ namespace Project.Esampm
                 a = "";
                 a = list[index].ToString();
                 //Periodicidad ot = new Periodicidad(Convert.ToInt32(comboBox4.Text),a);
-                Nota n = new Nota(comboBox1.Text, textBox1.Text, "Cliente---");
+                Nota n = new Nota(a, textBox1.Text, "Cliente---");
                 //catalogo.addOTI(ot);
                 not.addNota(n);
                 if (index1 < comboBox1.Items.Count - 1)
@@ -66,7 +66,7 @@ namespace Project.Esampm
                 }
 
             }
-            MessageBox.Show("Descripcion Guardada");
+            MessageBox.Show("Descripción Guardada");
             this.Close();
         }
 
@@ -107,22 +107,22 @@ namespace Project.Esampm
                 a = "";
                 a = list[index].ToString();
                 //Periodicidad ot = new Periodicidad(Convert.ToInt32(comboBox4.Text),a);
-                Nota n = new Nota(comboBox1.Text, textBox1.Text, "Empresa---");
+                Nota n = new Nota(a, textBox1.Text, "Empresa---");
                 //catalogo.addOTI(ot);
                 not.addNota(n);
-                if (index1 < comboBox1.Items.Count - 1)
-                {
+             //   if (index1 < comboBox1.Items.Count - 1)
+             //   {
 
-                    index1++;
-                    index++;
-                }
-                else
-                {
-                    index1 = index1;
-                }
+             //       index1++;
+             //       index++;
+             //   }
+             //   else
+             //   {
+             //       index1 = index1;
+             //   }
 
             }
-            MessageBox.Show("Descripcion Guardada");
+            MessageBox.Show("Descripción Guardada");
             this.Close();
         }
 

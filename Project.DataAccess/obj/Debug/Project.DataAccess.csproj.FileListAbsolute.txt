@@ -15,6 +15,6 @@ C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataA
 C:\Users\Uruk\Desktop\respaldo sin excecion segundo\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.pdb
 C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.dll
 C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\bin\Debug\Project.DataAccess.pdb
-C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.dll
 C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.pdb
+C:\Users\Urukazo\Desktop\respaldo bueno\Project.DataAccess\obj\Debug\Project.DataAccess.csprojResolveAssemblyReference.cache

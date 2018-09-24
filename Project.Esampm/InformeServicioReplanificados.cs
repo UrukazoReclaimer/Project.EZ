@@ -35,7 +35,11 @@ namespace Project.Esampm
          
             this.comboBox4.ValueMember = "rut";
         }
-
+        /// <summary>
+        /// Evento del boton para realizar busqueda de informacion y mostrarla en un datagridview.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             CatalogoInformes clpe = new CatalogoInformes();
@@ -51,19 +55,7 @@ namespace Project.Esampm
             dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             this.dataGridView1.DataSource = listaa;
 
-            if (comboBox2.Text == "" && comboBox1.Text == "" && comboBox4.Text == "" && comboBox5.Text == "") 
-            {             
-                dateTimePicker1.Format = DateTimePickerFormat.Custom;
-                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-                dateTimePicker2.Format = DateTimePickerFormat.Custom;
-                dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-                listaa = clpe.InformebuscarServiciosRePlanificadosSoloFechas(dateTimePicker1.Text, dateTimePicker2.Text);
-                dateTimePicker1.Format = DateTimePickerFormat.Custom;
-                dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-                dateTimePicker2.Format = DateTimePickerFormat.Custom;
-                dateTimePicker2.CustomFormat = "dd-MM-yyyy";
-                this.dataGridView1.DataSource = listaa;                              
-            }
+       
             if (comboBox2.Text == "" && comboBox1.Text == "" && comboBox4.Text == "" && comboBox5.Text == "")
             {
                 dateTimePicker1.Format = DateTimePickerFormat.Custom;
@@ -143,7 +135,11 @@ namespace Project.Esampm
                 this.dataGridView1.DataSource = listaa;
             }
         }
-
+        /// <summary>
+        /// Evento del boton que realiza la funcion de generar informe.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             PdfPTable pdfTabletitulo = new PdfPTable(1);
@@ -215,8 +211,9 @@ namespace Project.Esampm
              
                 pdfDoc.Open();
 
-               // iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance(@"\\STORAGE\\Public\\Esam compartido\\Informática\\esam.jpg");
-                 iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\Urukazo\\Desktop\\respaldo bueno\\esam.jpg");
+               iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance(@"\\STORAGE\\Public\\Esam compartido\\Informática\\esam.jpg");
+            //   iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\Urukazo\\Desktop\\respaldo bueno\\esam.jpg");
+              //  iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\natal\\Desktop\\Ejecutableroot\\esam.jpg");
                 imagen1.BorderWidth = 0;
                 imagen1.Alignment = Element.ALIGN_LEFT;
                 float percentage = 0.0f;
@@ -241,6 +238,38 @@ namespace Project.Esampm
         {
 
         }
+        private void ExportarDataGridViewExcelPlanilla(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -250,6 +279,12 @@ namespace Project.Esampm
             this.comboBox4.DisplayMember = "nombre";
           
             this.comboBox2.ValueMember = "rut";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            ExportarDataGridViewExcelPlanilla(dataGridView1);
+            MessageBox.Show("Exportación Realizada");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class InformeServiciosNoRealizado
+    public class InformeServiciosNoRealizado
     {
         string cliente;
         string tipolugar;
@@ -18,8 +18,8 @@ namespace Project.BussinessRules
         string servicios;
         string tecnicos;
         string motivo;
-
-        public InformeServiciosNoRealizado(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios, string tecnicos, string motivo)
+        string oti;
+        public InformeServiciosNoRealizado(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios, string tecnicos,string oti, string motivo)
         {
             this.Cliente = cliente;
             this.TipoLugar = tipolugar;
@@ -30,8 +30,9 @@ namespace Project.BussinessRules
             this.Periodicidad = periodicidad;
             this.Servicios = servicios;
             this.Tecnicos = tecnicos;
+            this.OTI = oti;
             this.Motivo = motivo;
-        
+
         }
 
         public string Cliente
@@ -105,6 +106,13 @@ namespace Project.BussinessRules
             set { tecnicos = value; }
 
         }
+        public string OTI
+        {
+
+            get { return oti; }
+            set { oti = value; }
+
+        }
 
         public string Motivo
         {
@@ -114,7 +122,7 @@ namespace Project.BussinessRules
 
         }
 
-        
+
 
 
     }

@@ -33,14 +33,18 @@ namespace Project.Esampm
             this.comboBox4.ValueMember = "rut";
 
             catalogoTecnico tunits = new catalogoTecnico();
-            List<Project.BussinessRules.Tecnico> tec = tunits.gettec();
+            List<Project.BussinessRules.Tecnico> tec = tunits.obtenertec();
 
             this.comboBox5.DataSource = tec;
             this.comboBox5.DisplayMember = "nombre";
             this.comboBox5.ValueMember = "cod";
 
         }
-
+        /// <summary>
+        /// Evento del boton para realizar busqueda de informacion y mostrarla en un datagridview.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -261,7 +265,43 @@ namespace Project.Esampm
         {
 
         }
+        private void ExportarDataGridViewExcelPlanilla(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
 
+                for (int i = 0; i < grd.Rows.Count; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        /// <summary>
+        /// Evento del boton que realiza la funcion de generar informe.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             PdfPTable pdfTabletitulo = new PdfPTable(1);
@@ -271,7 +311,7 @@ namespace Project.Esampm
             pdfTabletitulo.DefaultCell.BorderWidth = 1;
 
         
-            PdfPTable pdfTable = new PdfPTable(11);
+            PdfPTable pdfTable = new PdfPTable(12);
             pdfTable.DefaultCell.Padding = 1;
             pdfTable.WidthPercentage = 100;
             pdfTable.HorizontalAlignment = Element.ALIGN_RIGHT;
@@ -284,7 +324,7 @@ namespace Project.Esampm
             pdfleyenda.DefaultCell.BorderWidth = 1;
 
 
-            PdfPCell cltitulo = new PdfPCell(new Phrase("Informe de Servicios NO Realizados"));
+            PdfPCell cltitulo = new PdfPCell(new Phrase("Informe de Servicios Realizados"));
             cltitulo.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
             cltitulo.HorizontalAlignment = Element.ALIGN_CENTER;
 
@@ -335,15 +375,16 @@ namespace Project.Esampm
             }
             string hoy = DateTime.Now.Hour.ToString();
             comboBox1.Text = hoy;
-            using (FileStream stream = new FileStream(folderPath + "InformedeServiciosRealizados" + "-" + comboBox1.Text + ".pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + "InformedeServiciosSuspendidos" + "-" + comboBox1.Text + ".pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
               
                 pdfDoc.Open();
 
-               // iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance(@"\\STORAGE\\Public\\Esam compartido\\Informática\\esam.jpg");
-                iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\Urukazo\\Desktop\\respaldo bueno\\esam.jpg");
+               iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance(@"\\STORAGE\\Public\\Esam compartido\\Informática\\esam.jpg");
+               // iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\Urukazo\\Desktop\\respaldo bueno\\esam.jpg");
+               // iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\natal\\Desktop\\Ejecutableroot\\esam.jpg");
                 imagen1.BorderWidth = 0;
                 imagen1.Alignment = Element.ALIGN_LEFT;
                 float percentage = 0.0f;
@@ -360,17 +401,48 @@ namespace Project.Esampm
                 if (comboBox7.Text == "Explorer")
                 {
 
-                    System.Diagnostics.Process.Start("IExplore.exe", folderPath + "InformedeServiciosRealizados" + "-" + comboBox1.Text + ".pdf");
+                    System.Diagnostics.Process.Start("IExplore.exe", folderPath + "InformedeServiciosSuspendidos" + "-" + comboBox1.Text + ".pdf");
                     // System.Diagnostics.Process.Start("NitroPDF.exe", folderPath + "Checklist" + "-" + comboBox1.Text + dateTimePicker1.Text + ".pdf");
                 }
                 if (comboBox7.Text == "Nitro")
                 {
-                    System.Diagnostics.Process.Start("NitroPDF.exe", folderPath + "InformedeServiciosRealizados" + "-" + comboBox1.Text + dateTimePicker1.Text + ".pdf");
+                    System.Diagnostics.Process.Start("NitroPDF.exe", folderPath + "InformedeServiciosSuspendidos" + "-" + comboBox1.Text + dateTimePicker1.Text + ".pdf");
                 }
                 }
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            ExportarDataGridViewExcelPlanilla(dataGridView1);
+            MessageBox.Show("Exportación Realizada");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox4.Text == "" && comboBox2.Text == "" && comboBox1.Text == "" && comboBox6.Text == "" && comboBox3.Text == "" && comboBox5.Text == "")
+            {
+                CatalogoInformes clpe = new CatalogoInformes();
+                List<InformeServiciosRealizado> listaa = new List<InformeServiciosRealizado>();
+                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                dateTimePicker2.Format = DateTimePickerFormat.Custom;
+                dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+                listaa = clpe.InformebuscarServiciosRealizadosSoloFechasSeparadas(dateTimePicker1.Text, dateTimePicker2.Text);
+                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+                dateTimePicker2.Format = DateTimePickerFormat.Custom;
+                dateTimePicker2.CustomFormat = "dd-MM-yyyy";
+                this.dataGridView1.DataSource = listaa;
+
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

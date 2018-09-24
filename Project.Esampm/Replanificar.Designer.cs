@@ -45,6 +45,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -119,6 +121,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.Enabled = false;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(94, 141);
             this.comboBox4.Name = "comboBox4";
@@ -128,6 +131,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(94, 168);
             this.comboBox5.Name = "comboBox5";
@@ -171,7 +175,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(94, 195);
+            this.button1.Location = new System.Drawing.Point(12, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 23);
             this.button1.TabIndex = 14;
@@ -187,6 +191,7 @@
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(83, 20);
             this.comboBox8.TabIndex = 15;
+            this.comboBox8.Visible = false;
             // 
             // textBox1
             // 
@@ -195,11 +200,33 @@
             this.textBox1.Size = new System.Drawing.Size(55, 20);
             this.textBox1.TabIndex = 16;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(221, 212);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(90, 17);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Mantener Ots";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(153, 208);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(62, 21);
+            this.comboBox9.TabIndex = 18;
+            // 
             // Replanificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 241);
+            this.ClientSize = new System.Drawing.Size(312, 241);
+            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.button1);
@@ -245,5 +272,7 @@
         public System.Windows.Forms.ComboBox comboBox5;
         public System.Windows.Forms.ComboBox comboBox8;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.ComboBox comboBox9;
     }
 }

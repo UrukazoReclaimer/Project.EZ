@@ -14,13 +14,14 @@ namespace Project.Esampm
     public partial class Replanificar : Form
     {
         Boolean registro = false;
-        List<int> list = new List<int>();
-        List<int> lista = new List<int>();
+    public    List<int> list = new List<int>();
+    public    List<string> lista = new List<string>();
+        Boolean otis = false;
         public Replanificar()
         {
             InitializeComponent();
             catalogoTecnico tunits = new catalogoTecnico();
-            List<Project.BussinessRules.Tecnico> tec = tunits.gettec();         
+            List<Project.BussinessRules.Tecnico> tec = tunits.obtenertec();
             this.comboBox1.DataSource = tec;
             this.comboBox1.DisplayMember = "nombre";
             this.comboBox1.ValueMember = "cod";
@@ -29,13 +30,20 @@ namespace Project.Esampm
             this.comboBox4.DataSource = ser;
             this.comboBox4.DisplayMember = "sigla";
             this.comboBox4.ValueMember = "cod";
+
+          
+            
             CatalogoArea aunits = new CatalogoArea();
             List<Area> are = aunits.getarea();
             this.comboBox5.DataSource = are;
             this.comboBox5.DisplayMember = "NombreArea";
             this.comboBox5.ValueMember = "cod";
+             
+
 
             registro = true;
+           
+
         }
 
 
@@ -52,72 +60,104 @@ namespace Project.Esampm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Verifico la fechas a guadar?", "ATENCION",
+           
+           
+            lista.Add(comboBox5.Text);
+
+            if (MessageBox.Show("¿Verificó la fechas a guadar?", "ATENCIÓN",
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
               == DialogResult.Yes)
             {
                 CatalogoPlanilla ca = new CatalogoPlanilla();
 
                 int index = 0;
-                int index1 = 0;
+               
 
                 index = 0;
-                index1 = 0;
-                for (int j = list.Count - 1; j >= 0; j--)
+             
+                if (otis == false)
                 {
-
-                    string a = "";
-                    a = list[index].ToString();
-                    if (lista.Count != 0)
+                    for (int j = list.Count - 1; j >= 0; j--)
                     {
-                        for (int i = lista.Count - 1; i >= 0; i--)
+
+                        string a = "";
+                        a = list[index].ToString();
+                        if (lista.Count != 0)
                         {
-
-                            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-                            // Display the date as "Mon 26 Feb 2001".
-                            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-                            string b = "";
-                            b = lista[index1].ToString();
-                            Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox8.Text), Convert.ToInt32(a), Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(b), "", 0, textBox1.Text, "P", "");
-                            ca.addfecha(pla);
-                            //cambair que vuela el codigo de la planilla
-                            if (index1 < lista.Count - 1)
-                            {
-
-                                index1++;
-                            }
-                            else
-                            {
-                                index1 = index1;
-                            }
+                         
+                                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                                // Display the date as "Mon 26 Feb 2001".
+                                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                                string b = "";
+                               b = string.Join(",", lista.ToArray());
+                                Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox8.Text), Convert.ToInt32(a), Convert.ToInt32(comboBox1.SelectedValue),b, "", 0, textBox1.Text, "P", "", "Primario", "", "");
+                                ca.addfecha(pla);
+                                //cambair que vuela el codigo de la planilla                                                                                  
+                            index++;
 
 
                         }
-                        index1 = 0;
-                        index++;
-
-
+                        else
+                        {
+                            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                            // Display the date as "Mon 26 Feb 2001".
+                            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                            Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox8.Text), Convert.ToInt32(a), Convert.ToInt32(comboBox1.SelectedValue), "N/A", "", 0, textBox1.Text, "P", "", "Primario", "", "");
+                            ca.addfecha(pla);
+                        }
                     }
-                    else
-                    {
-                        dateTimePicker1.Format = DateTimePickerFormat.Custom;
-                        // Display the date as "Mon 26 Feb 2001".
-                        dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-                        Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox8.Text), Convert.ToInt32(a), Convert.ToInt32(comboBox1.SelectedValue), 30, "", 0, textBox1.Text, "P", "");
-                        ca.addfecha(pla);
-                    }
+                    index = 0;
+                    
                 }
-                index = 0;
-                index1 = 0;
+                if (otis == true) 
+                {
+
+                    for (int j = list.Count - 1; j >= 0; j--)
+                    {
+
+                        string a = "";
+                        a = list[index].ToString();
+                        if (lista.Count != 0)
+                        {
+                           
+
+                                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                                // Display the date as "Mon 26 Feb 2001".
+                                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                                string b = "";
+                                b = string.Join(",", lista.ToArray());
+                                Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox8.Text), Convert.ToInt32(a), Convert.ToInt32(comboBox1.SelectedValue), b, comboBox9.Text, 0, textBox1.Text, "P", "", "Primario", "", "");
+                                ca.addfecha(pla);
+                                //cambair que vuela el codigo de la planilla
+                              
+                            index++;
+
+
+                        }
+                        else
+                        {
+                            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                            // Display the date as "Mon 26 Feb 2001".
+                            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                            Periodicidad pla = new Periodicidad(dateTimePicker1.Text, Convert.ToInt32(comboBox8.Text), Convert.ToInt32(a), Convert.ToInt32(comboBox1.SelectedValue), "N/A", comboBox9.Text, 0, textBox1.Text, "P", "", "Primario", "", "");
+                            ca.addfecha(pla);
+                        }
+                    }
+                    index = 0;
+                    
+                
+                
+                }
             }
 
 
 
-            MessageBox.Show("Replanificacion Guardada");
+            MessageBox.Show("Replanificación Guardada");
             this.Close();
             graData();
-        
-    }
+             
+
+        }
 
         private void Replanificar_Load(object sender, EventArgs e)
         {
@@ -150,8 +190,13 @@ namespace Project.Esampm
 
                 comboBox7.Items.Add(comboBox5.Text);
                 //comboBox4.Items.Add(index);
-                lista.Add(index);
+                //lista.Add(index);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            otis = true;
         }
     }
 }

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class CatalogoArea
+    public class CatalogoArea
     {
-       /*
-        * Agrega un area a la tabla Area
-        * 
-        * */
+        /*
+         * Agrega un area a la tabla Area
+         * 
+         * */
         public void addArea(Area ac)
         {
             try
@@ -64,7 +64,7 @@ namespace Project.BussinessRules
             DataAccess.DataBase bd = new DataAccess.DataBase();
             bd.connect();
             List<Area> units = new List<Area>();
-            string sql = "select distinct area.Cod from area inner join periodicidad, planilla where periodicidad.Planilla_Cod='"+planilla+"' and periodicidad.Fecha='"+periodicidad+"' and periodicidad.Planilla_Cod=planilla.Cod and area.cod=periodicidad.Area_Cod;";
+            string sql = "select distinct area.Cod from area inner join periodicidad, planilla where periodicidad.Planilla_Cod='" + planilla + "' and periodicidad.Fecha='" + periodicidad + "' and periodicidad.Planilla_Cod=planilla.Cod and area.cod=periodicidad.Area_Cod;";
             bd.CreateCommand(sql);
 
             DbDataReader result = bd.Query();
@@ -120,7 +120,7 @@ namespace Project.BussinessRules
 
                     int cod = result.GetInt32(0);
                     string nom = result.GetString(1);
-              
+
 
                     Area a = new Area(cod, nom);
                     tec.Add(a);

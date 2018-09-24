@@ -18,6 +18,12 @@ namespace Project.Esampm
         {
             InitializeComponent();
 
+            catalogoTecnico tunits = new catalogoTecnico();
+            List<Project.BussinessRules.Tecnico> tec = tunits.obtenertec();
+
+            this.comboBox2.DataSource = tec;
+            this.comboBox2.DisplayMember = "nombre";
+            this.comboBox2.ValueMember = "cod";
 
             catalogoTecnico clp = new catalogoTecnico();
             List<Tecnico> lista = new List<Tecnico>();
@@ -56,29 +62,44 @@ namespace Project.Esampm
       
         private void button1_Click(object sender, EventArgs e)
         {
-            validarRut(textBox1.Text);
-            if (validarRut(textBox1.Text) == true)
+            catalogoTecnico ca1 = new catalogoTecnico();
+            List<Tecnico> la = ca1.gettecrutcondition(textBox1.Text);
+            this.comboBox2.DataSource = la;
+            this.comboBox2.DisplayMember = "cod";
+
+            this.comboBox2.ValueMember = "cod";
+
+            if (comboBox2.Items.Count >= 1)
             {
-                MessageBox.Show("Ingreso Valido");
-                this.textBox1.Focus();
-                catalogoTecnico ca = new catalogoTecnico();
-                Tecnico tec = new Tecnico(this.textBox1.Text, this.textBox2.Text, this.comboBox1.Text);
-                ca.addTecnico(tec);
 
-                textBox1.Text = "";
-                textBox2.Text = "";
-
-
+                MessageBox.Show("Tecnico Existente");
 
             }
             else
             {
+                validarRut(textBox1.Text);
+                if (validarRut(textBox1.Text) == true)
+                {
+                    MessageBox.Show("Ingreso Valido");
+                    this.textBox1.Focus();
+                    catalogoTecnico ca = new catalogoTecnico();
+                    Tecnico tec = new Tecnico(this.textBox1.Text, this.textBox2.Text, this.comboBox1.Text);
+                    ca.addTecnico(tec);
 
-                MessageBox.Show("Teclee un dato valido", "ERROR",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+
+
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Teclee un dato valido", "ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                this.graData();
             }
-            this.graData();
-
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
@@ -142,6 +163,28 @@ namespace Project.Esampm
             textBox4.Clear();
             textBox4.Enabled = true;
            
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            catalogoTecnico ca = new catalogoTecnico();
+            List<Tecnico> la = ca.gettecrutcondition(textBox1.Text);
+            this.comboBox2.DataSource = la;
+            this.comboBox2.DisplayMember = "cod";
+
+            this.comboBox2.ValueMember = "cod";
+
+            if (comboBox2.Items.Count >= 1)
+            {
+
+                MessageBox.Show("Tecnico Existente");
+
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

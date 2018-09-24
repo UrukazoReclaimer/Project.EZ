@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.comboBox6);
             this.panel1.Controls.Add(this.label7);
@@ -91,6 +93,16 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(274, 106);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(82, 32);
+            this.button15.TabIndex = 56;
+            this.button15.Text = "Generar Excel";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -98,7 +110,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 13);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Clasificacion Cliente";
+            this.label8.Text = "Clasificación Cliente";
             // 
             // comboBox6
             // 
@@ -183,6 +195,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Centros",
@@ -318,7 +332,7 @@
             // Clasificacion
             // 
             this.Clasificacion.DataPropertyName = "Clasificacion";
-            this.Clasificacion.HeaderText = "Clasificacion";
+            this.Clasificacion.HeaderText = "Clasificación";
             this.Clasificacion.Name = "Clasificacion";
             // 
             // Cliente
@@ -372,7 +386,7 @@
             // Tecnico
             // 
             this.Tecnico.DataPropertyName = "Tecnicos";
-            this.Tecnico.HeaderText = "Tecnico";
+            this.Tecnico.HeaderText = "Técnico";
             this.Tecnico.Name = "Tecnico";
             // 
             // label9
@@ -407,7 +421,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "InformeServiciosPlanificados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InformeServiciosPlanificados";
+            this.Text = "Informe Servicios Planificado";
             this.Load += new System.EventHandler(this.InformeServiciosPlanificados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -439,6 +453,8 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Clasificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoLugar;
@@ -449,7 +465,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodicidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Servicios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tecnico;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Button button15;
     }
 }

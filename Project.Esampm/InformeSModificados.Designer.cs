@@ -42,6 +42,7 @@
             this.Tecnicos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -159,6 +160,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.comboBox4);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -175,8 +177,20 @@
             this.panel1.TabIndex = 38;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(275, 105);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(82, 32);
+            this.button15.TabIndex = 56;
+            this.button15.Text = "Generar Excel";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // comboBox4
             // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Todos"});
@@ -318,5 +332,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Servicios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tecnicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
+        private System.Windows.Forms.Button button15;
     }
 }

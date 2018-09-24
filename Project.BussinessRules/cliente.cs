@@ -8,28 +8,15 @@ namespace Project.BussinessRules
 {
     public class cliente
     {
-       
+
         string nombre;
         string rut;
         string clasificacion;
         string ltratamiento;
         int cod;
-    
-/*
-        public cliente(int cod,string nombre, string rut , string clasificacion, string ltratamiento)
-        {
-            this.Cod = cod;
-            this.Nombre = nombre;
-            this.Rut = rut;
-          
-            this.Clasificacion = clasificacion;
-            this.LTratamiento = ltratamiento;
-           
+        string rutaaaux;
+        string codaux;
 
-
-
-        }
-*/
         public cliente(int cod, string nombre, string rut, string clasificacion, string ltratamiento)
         {
             this.Cod = cod;
@@ -38,14 +25,14 @@ namespace Project.BussinessRules
 
             this.Clasificacion = clasificacion;
             this.LTratamiento = ltratamiento;
-       
+
 
 
 
         }
 
 
-        public cliente(int cod,string nombre, string rut, string clasificacion)
+        public cliente(int cod, string nombre, string rut, string clasificacion)
         {
             this.Cod = cod;
             this.Nombre = nombre;
@@ -53,7 +40,7 @@ namespace Project.BussinessRules
 
 
             this.Clasificacion = clasificacion;
-          
+
 
 
 
@@ -63,55 +50,63 @@ namespace Project.BussinessRules
             this.Cod = cod;
             this.Nombre = nombre;
             this.Rut = rut;
-           
-            
+
+
             this.Clasificacion = clasificacion;
             this.LTratamiento = ltratamiento;
-           
-         
+
+
 
         }
 
 
 
-        
-        public cliente(string rut,string nombre, int cod)
+
+        public cliente(string rut, string nombre, int cod)
         {
             this.Rut = rut;
             this.Nombre = nombre;
             this.Cod = cod;
         }
 
-        public cliente(int cod, string rut, string ltratamiento) {
+        public cliente(int cod, string rut, string ltratamiento)
+        {
 
             this.Cod = cod;
             this.Rut = rut;
             this.LTratamiento = ltratamiento;
-           
-        
+
+
         }
-        public cliente(string nombre,string rut )
+        public cliente(string nombre, string rut)
         {
-        
+
             this.Nombre = nombre;
             this.Rut = rut;
         }
 
-        public cliente(int cod,string rut)
+        public cliente(int cod, string rut)
         {
             this.Cod = cod;
             this.Rut = rut;
-           
+
 
         }
+//wait
+        public cliente(string nombre, string rutaaux, int cod, string rut, int codaux)
+        {
 
-      //  public cliente(int cod, string nombre)
-       // {
-       //     this.Cod = cod;
-       //     this.Nombre = nombre;
+          
+            this.Nombre = nombre;
+            this.Nombre = rutaaaux;
+            this.Cod = codaux;
+            this.Rut = rut;
+            this.Cod = cod;
 
 
-        //}
+
+
+        }
 
         public cliente(string nombre)
         {
@@ -123,7 +118,7 @@ namespace Project.BussinessRules
         public cliente(int cod)
         {
 
-            this.Cod =cod;
+            this.Cod = cod;
 
         }
 
@@ -132,13 +127,13 @@ namespace Project.BussinessRules
 
 
 
-         public int Cod
+        public int Cod
         {
 
             get { return cod; }
             set { cod = value; }
         }
-      
+
 
         public string Nombre
         {
@@ -171,7 +166,7 @@ namespace Project.BussinessRules
         }
 
 
-        
+
     }
 }
 

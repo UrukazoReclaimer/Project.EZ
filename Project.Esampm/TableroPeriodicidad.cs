@@ -26,11 +26,12 @@ namespace Project.Esampm
         {
             PeriocidadMensual pm = new PeriocidadMensual();
             pm.comboBox1.Text = textBox1.Text;
+            pm.textBox2.Text = textBox2.Text;
                listBox1.Text = Convert.ToString(listBox1.SelectedValue);
             listBox1.SelectedIndex = listBox1.FindString(listBox1.Text);
             for (int i = listBox1.Items.Count - 1; i >= 0; i--)
             {
-                pm.listBox1.Items.Add(listBox1.Text);
+               
 
                 if (listBox1.SelectedIndex < listBox1.Items.Count - 1)
                 {
@@ -42,15 +43,16 @@ namespace Project.Esampm
                     listBox1.SelectedIndex = listBox1.SelectedIndex;
                 }
             }
-            pm.MdiParent = Form1.ActiveForm;
+            pm.MdiParent = Principal.ActiveForm;
             pm.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PeriodicidadSemanal pse = new PeriodicidadSemanal();
-         
+            PeriodicidadSemanal pse = new PeriodicidadSemanal();          
             pse.comboBox1.Text = textBox1.Text;
+            pse.textBox1.Text = textBox2.Text;
             listBox1.Text = Convert.ToString(listBox1.SelectedValue);
             listBox1.SelectedIndex = listBox1.FindString(listBox1.Text);
             for (int i = listBox1.Items.Count - 1; i >= 0; i--)
@@ -67,25 +69,30 @@ namespace Project.Esampm
                     listBox1.SelectedIndex = listBox1.SelectedIndex;
                 }
             }
-            pse.MdiParent = Form1.ActiveForm;
+            pse.MdiParent = Principal.ActiveForm;
             pse.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             PeriocidadQuincenal pq = new PeriocidadQuincenal();
+            pq.textBox2.Text = textBox2.Text;
             pq.comboBox1.Text = textBox1.Text;
-            pq.MdiParent = Form1.ActiveForm;
+            pq.MdiParent = Principal.ActiveForm;
       
                 pq.Show();
+                this.Close();
             
         }
         private void button4_Click(object sender, EventArgs e)
         {
             PeriodicidadTrimestral pt = new PeriodicidadTrimestral();
             pt.comboBox1.Text = textBox1.Text;
-            pt.MdiParent = Form1.ActiveForm;
+            pt.textBox2.Text = textBox2.Text;
+            pt.MdiParent = Principal.ActiveForm;
                 pt.Show();
+                this.Close();
             
         }
 
@@ -93,6 +100,7 @@ namespace Project.Esampm
         {
             PeriodicidadSemestral ps = new PeriodicidadSemestral();
             ps.comboBox1.Text = textBox1.Text;
+            ps.textBox2.Text = textBox2.Text;
             listBox1.Text = Convert.ToString(listBox1.SelectedValue);
             listBox1.SelectedIndex = listBox1.FindString(listBox1.Text);
             for (int i = listBox1.Items.Count-1; i >= 0; i--)
@@ -109,14 +117,16 @@ namespace Project.Esampm
                     listBox1.SelectedIndex = listBox1.SelectedIndex;
                 }
             }
-            ps.MdiParent = Form1.ActiveForm;
+            ps.MdiParent = Principal.ActiveForm;
             ps.Show();
+            this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             PeriodicidadAnual pa = new PeriodicidadAnual();
             pa.comboBox1.Text = textBox1.Text;
+            pa.textBox2.Text = textBox2.Text;
             listBox1.Text = Convert.ToString(listBox1.SelectedValue);
             listBox1.SelectedIndex = listBox1.FindString(listBox1.Text);
             for (int i = listBox1.Items.Count - 1; i >= 0; i--)
@@ -133,16 +143,19 @@ namespace Project.Esampm
                     listBox1.SelectedIndex = listBox1.SelectedIndex;
                 }
             }
-            pa.MdiParent = Form1.ActiveForm;
+            pa.MdiParent = Principal.ActiveForm;
             pa.Show();
+            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             PeriodicidadAsolicitud pas = new PeriodicidadAsolicitud();
             pas.comboBox1.Text = textBox1.Text;
-            pas.MdiParent = Form1.ActiveForm;
+            pas.textBox3.Text = textBox2.Text;
+            pas.MdiParent = Principal.ActiveForm;
             pas.Show();
+            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -170,8 +183,9 @@ namespace Project.Esampm
 
             }
       
-            pu.MdiParent = Form1.ActiveForm;
+            pu.MdiParent = Principal.ActiveForm;
             pu.Show();
+            this.Close();
          
         }
 
@@ -184,14 +198,15 @@ namespace Project.Esampm
         {
             PeriodicidadBimensual pb = new PeriodicidadBimensual();
             pb.comboBox31.Text = textBox1.Text;
-
+            pb.textBox2.Text = textBox2.Text;
             listBox1.Text = Convert.ToString(listBox1.SelectedValue);
             listBox1.SelectedIndex = listBox1.FindString(listBox1.Text);
 
 
 
-            pb.MdiParent = Form1.ActiveForm;
+            pb.MdiParent = Principal.ActiveForm;
             pb.Show();
+            this.Close();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -199,8 +214,40 @@ namespace Project.Esampm
            
             PeriodicidadTrimensual tri = new PeriodicidadTrimensual();
             tri.comboBox109.Text = textBox1.Text;
-            tri.MdiParent = Form1.ActiveForm;
+            tri.textBox1.Text = textBox2.Text;
+            tri.MdiParent = Principal.ActiveForm;
             tri.Show();
+            this.Close();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            LDD ldd = new LDD();
+            ldd.Show();
+            this.Close();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            periodicidadDemoliciones pt = new periodicidadDemoliciones();
+            pt.comboBox1.Text = textBox1.Text;
+            pt.textBox2.Text = textBox2.Text;
+            pt.MdiParent = Principal.ActiveForm;
+            pt.Show();
+            this.Close();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            IngresarAuditoria pu = new IngresarAuditoria();
+            pu.comboBox1.Text = textBox1.Text;
+            pu.textBox2.Text = textBox2.Text;
+        
+            pu.MdiParent = Principal.ActiveForm;
+            pu.Show();
+            this.Close();
+         
+        }
         }
     }
-}
+

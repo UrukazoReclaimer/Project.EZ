@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class InformeServiciosSuspendidos
+    public class InformeServiciosSuspendidos
     {
 
         string cliente;
@@ -22,7 +22,7 @@ namespace Project.BussinessRules
         string motivo;
 
 
-        public InformeServiciosSuspendidos(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios,string noti,string solicitud,  string motivo)
+        public InformeServiciosSuspendidos(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios, string noti, string solicitud, string motivo)
         {
             this.Cliente = cliente;
             this.TipoLugar = tipolugar;
@@ -35,10 +35,10 @@ namespace Project.BussinessRules
             this.Noti = noti;
             this.Solicitud = solicitud;
             this.Motivo = motivo;
-        
+
         }
 
-       public string Cliente
+        public string Cliente
         {
 
             get { return cliente; }
@@ -110,7 +110,7 @@ namespace Project.BussinessRules
 
         }
 
-           public string Solicitud
+        public string Solicitud
         {
 
             get { return solicitud; }

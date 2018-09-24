@@ -8,6 +8,16 @@ namespace Project.Esampm
 {
     static class Program
     {
+        public static Principal Accede
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -16,7 +26,7 @@ namespace Project.Esampm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new Form1());
+             Application.Run(new Principal());
         }
     }
 }

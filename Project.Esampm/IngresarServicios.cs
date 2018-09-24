@@ -19,13 +19,12 @@ namespace Project.Esampm
 
             CatalogoServicios clp = new CatalogoServicios();
             List<servicio> lista = new List<servicio>();
-
+            List<servicio> lista1 = new List<servicio>(); 
             lista = clp.mostrarservicio("");
+            lista1 = clp.mostrarservicio("");             
             this.dataGridView1.DataSource = lista;
-
- 
-
             
+                 
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -52,8 +51,8 @@ namespace Project.Esampm
         private void button2_Click(object sender, EventArgs e)
         {
            CatalogoServicios ac = new CatalogoServicios();
-            ac.removeServico(this.textBox1.Text);
-   
+            ac.removeServico(this.textBox3.Text);
+            this.graData();
         }
 
         private void button5_Click(object sender, EventArgs e)

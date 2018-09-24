@@ -17,12 +17,21 @@ namespace Project.BussinessRules
         public servicio(int cod)
         {
             this.Cod = cod;
-         
+
 
 
         }
 
-        public servicio(int cod, string nombre,  string sigla)
+        public servicio(string sigla)
+        {
+            this.Sigla = sigla;
+
+
+
+        }
+
+
+        public servicio(int cod, string nombre, string sigla)
         {
             this.Cod = cod;
             this.Nombre = nombre;
@@ -32,10 +41,10 @@ namespace Project.BussinessRules
         }
         public servicio(string nombre, string sigla)
         {
-            
+
             this.Nombre = nombre;
             this.Sigla = sigla;
-        } 
+        }
 
 
 
@@ -55,7 +64,8 @@ namespace Project.BussinessRules
         }
 
 
-        public string Sigla {
+        public string Sigla
+        {
 
             get { return sigla; }
             set { sigla = value; }

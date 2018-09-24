@@ -19,9 +19,9 @@ namespace Project.BussinessRules
         string tecnicos;
         string noti;
         string consumo;
+        string tiempo;
 
-
-        public InformeServiciosRealizado(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios, string tecnicos, string noti, string consumo)
+        public InformeServiciosRealizado(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios, string tecnicos, string noti, string consumo,string tiempo)
         {
             this.Cliente = cliente;
             this.TipoLugar = tipolugar;
@@ -34,9 +34,9 @@ namespace Project.BussinessRules
             this.Tecnicos = tecnicos;
             this.Noti = noti;
             this.Consumo = consumo;
-        
-        
-        
+            this.Tiempo = tiempo;
+
+
         }
 
         public string Cliente
@@ -124,6 +124,13 @@ namespace Project.BussinessRules
 
             get { return consumo; }
             set { consumo = value; }
+
+        }
+        public string Tiempo
+        {
+
+            get { return tiempo; }
+            set { tiempo = value; }
 
         }
 

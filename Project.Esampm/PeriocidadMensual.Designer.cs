@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,7 +67,6 @@
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.comboBox15 = new System.Windows.Forms.ComboBox();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
@@ -120,15 +118,8 @@
             this.comboBox60 = new System.Windows.Forms.ComboBox();
             this.comboBox61 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.BackColor = System.Drawing.SystemColors.Window;
-            this.monthCalendar1.Location = new System.Drawing.Point(693, 24);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // button1
             // 
@@ -256,6 +247,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(104, 20);
             this.dateTimePicker1.TabIndex = 26;
             this.dateTimePicker1.Value = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
@@ -360,7 +352,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(759, 198);
+            this.comboBox1.Location = new System.Drawing.Point(696, 248);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(106, 20);
             this.comboBox1.TabIndex = 38;
@@ -372,7 +364,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 13);
             this.label13.TabIndex = 39;
-            this.label13.Text = "Tecnicos";
+            this.label13.Text = "Técnicos";
             // 
             // comboBox2
             // 
@@ -381,6 +373,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 40;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -389,6 +382,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 41;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -422,6 +416,7 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 45;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // comboBox8
             // 
@@ -470,15 +465,6 @@
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(121, 21);
             this.comboBox13.TabIndex = 51;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(693, 192);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(60, 95);
-            this.listBox1.TabIndex = 52;
-            this.listBox1.Visible = false;
             // 
             // comboBox14
             // 
@@ -596,6 +582,7 @@
             this.label14.Size = new System.Drawing.Size(50, 13);
             this.label14.TabIndex = 65;
             this.label14.Text = "Servicios";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // comboBox26
             // 
@@ -704,6 +691,7 @@
             this.comboBox37.Size = new System.Drawing.Size(96, 21);
             this.comboBox37.TabIndex = 77;
             this.comboBox37.Text = "Seleccionados";
+            this.comboBox37.SelectedIndexChanged += new System.EventHandler(this.comboBox37_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -712,7 +700,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(34, 13);
             this.label15.TabIndex = 78;
-            this.label15.Text = "Areas";
+            this.label15.Text = "Áreas";
             // 
             // comboBox38
             // 
@@ -830,6 +818,7 @@
             this.comboBox50.Size = new System.Drawing.Size(96, 21);
             this.comboBox50.TabIndex = 91;
             this.comboBox50.Text = "Seleccionados";
+            this.comboBox50.SelectedIndexChanged += new System.EventHandler(this.comboBox50_SelectedIndexChanged);
             // 
             // comboBox51
             // 
@@ -933,17 +922,25 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(871, 198);
+            this.textBox1.Location = new System.Drawing.Point(775, 274);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(24, 20);
             this.textBox1.TabIndex = 103;
             this.textBox1.Text = "M";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(696, 274);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(73, 20);
+            this.textBox2.TabIndex = 104;
+            // 
             // PeriocidadMensual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 396);
+            this.ClientSize = new System.Drawing.Size(809, 396);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox61);
             this.Controls.Add(this.comboBox60);
@@ -995,7 +992,6 @@
             this.Controls.Add(this.comboBox16);
             this.Controls.Add(this.comboBox15);
             this.Controls.Add(this.comboBox14);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox13);
             this.Controls.Add(this.comboBox12);
             this.Controls.Add(this.comboBox11);
@@ -1035,10 +1031,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.monthCalendar1);
             this.Name = "PeriocidadMensual";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PeriocidadMensual";
+            this.Text = "Periocidad Mensual";
             this.Load += new System.EventHandler(this.PeriocidadMensual_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1047,7 +1042,6 @@
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -1100,7 +1094,6 @@
         private System.Windows.Forms.ComboBox comboBox24;
         private System.Windows.Forms.ComboBox comboBox25;
         private System.Windows.Forms.Label label14;
-        public System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox comboBox26;
         private System.Windows.Forms.ComboBox comboBox27;
         private System.Windows.Forms.ComboBox comboBox28;
@@ -1139,5 +1132,6 @@
         private System.Windows.Forms.ComboBox comboBox60;
         private System.Windows.Forms.ComboBox comboBox61;
         private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
     }
 }

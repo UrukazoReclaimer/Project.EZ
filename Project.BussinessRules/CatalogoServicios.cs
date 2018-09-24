@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-    public  class CatalogoServicios
+    public class CatalogoServicios
     {
         public void addServicio(servicio ac)
         {
@@ -16,7 +16,7 @@ namespace Project.BussinessRules
             {
                 DataAccess.DataBase bd = new DataAccess.DataBase();
                 bd.connect();
-                string sql = "insert into servicio values('" + ac.Cod + "','" + ac.Nombre +"','"+ac.Sigla+ "')";
+                string sql = "insert into servicio values('" + ac.Cod + "','" + ac.Nombre + "','" + ac.Sigla + "')";
                 bd.CreateCommand(sql);
                 bd.execute();
                 bd.close();
@@ -42,7 +42,7 @@ namespace Project.BussinessRules
 
             while (result.Read())
             {
-                servicio u = new servicio(int.Parse(result.GetString(0)), result.GetString(1),result.GetString(2));
+                servicio u = new servicio(int.Parse(result.GetString(0)), result.GetString(1), result.GetString(2));
                 units.Add(u);
 
             }
@@ -58,14 +58,14 @@ namespace Project.BussinessRules
             DataAccess.DataBase bd = new DataAccess.DataBase();
             bd.connect();
             List<servicio> units = new List<servicio>();
-            string sql = "select servicio.cod from servicio, periodicidad where  periodicidad.Fecha='" + fecha + "' and periodicidad.Planilla_Cod='" + codplanilla + "' and servicio.Sigla='" + sigla + "';";
+            string sql = "select distinct(servicio.cod) from servicio, periodicidad where  periodicidad.Fecha='" + fecha + "' and periodicidad.Planilla_Cod='" + codplanilla + "' and servicio.Sigla='" + sigla + "';";
             bd.CreateCommand(sql);
 
             DbDataReader result = bd.Query();
 
             while (result.Read())
             {
-                 servicio u = new servicio(int.Parse(result.GetString(0)));
+                servicio u = new servicio(int.Parse(result.GetString(0)));
                 units.Add(u);
 
             }
@@ -85,7 +85,7 @@ namespace Project.BussinessRules
 
             db.connect();
 
-            string sql = "delete from servicio WHERE nombre ='" + nom + "'";
+            string sql = "delete from servicio WHERE sigla ='" + nom + "'";
 
             db.CreateCommand(sql);
 
@@ -96,6 +96,33 @@ namespace Project.BussinessRules
 
 
         }
+
+
+        public List<servicio> obetenerCodser(string sigla)
+        {
+
+            DataBase bd = new DataBase();
+            bd.connect();
+            List<servicio> units = new List<servicio>();
+
+            string sql = "select servicio.Cod from servicio where servicio.Sigla = '"+sigla+"'";
+            bd.CreateCommand(sql);
+
+            DbDataReader result = bd.Query();
+
+            while (result.Read())
+            {
+                servicio u = new servicio(result.GetInt32(0));
+                units.Add(u);
+
+            }
+            result.Close();
+            bd.close();
+            return units;
+
+        }
+
+
 
         public List<servicio> mostrarservicio(string s)
         {
@@ -114,14 +141,17 @@ namespace Project.BussinessRules
                     int cod = result.GetInt32(0);
                     string nom = result.GetString(1);
                     string sig = result.GetString(2);
-                    
-                    servicio a = new servicio(cod,nom,sig);
+
+                    servicio a = new servicio(cod, nom, sig);
                     tec.Add(a);
                 }
+                     
 
                 result.Close();
+              
                 db.close();
                 return tec;
+                
             }
             catch (DataAccess.DataAccessException ex)
             {
@@ -141,7 +171,7 @@ namespace Project.BussinessRules
                 DataBase db = new DataBase();
                 db.connect();
 
-                string sql = "select servicio.Cod, servicio.Nombre, servicio.Sigla from servicio where servicio.nombre like '%"+s+"%'";
+                string sql = "select servicio.Cod, servicio.Nombre, servicio.Sigla from servicio where servicio.nombre like '%" + s + "%'";
                 db.CreateCommand(sql);
                 List<servicio> tec = new List<servicio>();
                 DbDataReader result = db.Query();
@@ -152,8 +182,8 @@ namespace Project.BussinessRules
                     int cod = result.GetInt32(0);
                     string nom = result.GetString(1);
                     string sig = result.GetString(2);
-                    
-                    servicio a = new servicio(cod,nom,sig);
+
+                    servicio a = new servicio(cod, nom, sig);
                     tec.Add(a);
                 }
 
@@ -172,6 +202,6 @@ namespace Project.BussinessRules
         }
 
 
-         
+
     }
 }

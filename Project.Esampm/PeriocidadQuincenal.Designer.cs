@@ -271,6 +271,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button13 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -346,7 +347,7 @@
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(67, 13);
             this.label50.TabIndex = 31;
-            this.label50.Text = "Areas visita2";
+            this.label50.Text = "Áreas visita2";
             // 
             // comboBox53
             // 
@@ -372,7 +373,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(67, 13);
             this.label25.TabIndex = 28;
-            this.label25.Text = "Areas visita1";
+            this.label25.Text = "Áreas visita1";
             // 
             // comboBox52
             // 
@@ -449,7 +450,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(92, 20);
             this.dateTimePicker2.TabIndex = 16;
-            this.dateTimePicker2.Value = new System.DateTime(2016, 2, 15, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2016, 1, 15, 0, 0, 0, 0);
             // 
             // dateTimePicker1
             // 
@@ -466,18 +467,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Vsita2";
+            this.label2.Text = "Visita2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Vsita1";
+            this.label1.Text = "Visita1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
@@ -514,7 +515,7 @@
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(67, 13);
             this.label63.TabIndex = 35;
-            this.label63.Text = "Areas visita2";
+            this.label63.Text = "Áreas visita2";
             // 
             // comboBox79
             // 
@@ -557,7 +558,7 @@
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(67, 13);
             this.label62.TabIndex = 37;
-            this.label62.Text = "Areas visita1";
+            this.label62.Text = "Áreas visita1";
             // 
             // comboBox75
             // 
@@ -661,18 +662,18 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Vsita2";
+            this.label3.Text = "Visita2";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Vsita1";
+            this.label4.Text = "Visita1";
             // 
             // panel3
             // 
@@ -718,7 +719,7 @@
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(67, 13);
             this.label74.TabIndex = 38;
-            this.label74.Text = "Areas visita2";
+            this.label74.Text = "Áreas visita2";
             // 
             // label73
             // 
@@ -727,7 +728,7 @@
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(67, 13);
             this.label73.TabIndex = 38;
-            this.label73.Text = "Areas visita1";
+            this.label73.Text = "Áreas visita1";
             // 
             // comboBox103
             // 
@@ -854,18 +855,18 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Vsita2";
+            this.label5.Text = "Visita2";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Vsita1";
+            this.label6.Text = "Visita1";
             // 
             // panel4
             // 
@@ -945,7 +946,7 @@
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(67, 13);
             this.label53.TabIndex = 35;
-            this.label53.Text = "Areas visita2";
+            this.label53.Text = "Áreas visita2";
             // 
             // label52
             // 
@@ -954,7 +955,7 @@
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(67, 13);
             this.label52.TabIndex = 35;
-            this.label52.Text = "Areas visita1";
+            this.label52.Text = "Áreas visita1";
             // 
             // comboBox57
             // 
@@ -1047,18 +1048,18 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(5, 64);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Vsita2";
+            this.label7.Text = "Visita2";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(5, 42);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Vsita1";
+            this.label8.Text = "Visita1";
             // 
             // panel5
             // 
@@ -1094,7 +1095,7 @@
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(67, 13);
             this.label66.TabIndex = 41;
-            this.label66.Text = "Areas visita2";
+            this.label66.Text = "Áreas visita2";
             // 
             // label65
             // 
@@ -1103,7 +1104,7 @@
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(67, 13);
             this.label65.TabIndex = 40;
-            this.label65.Text = "Areas visita1";
+            this.label65.Text = "Áreas visita1";
             // 
             // comboBox85
             // 
@@ -1241,18 +1242,18 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 66);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
+            this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Vsita2";
+            this.label9.Text = "Visita2";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 41);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 13);
+            this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Vsita1";
+            this.label10.Text = "Visita1";
             // 
             // panel6
             // 
@@ -1298,7 +1299,7 @@
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(67, 13);
             this.label77.TabIndex = 44;
-            this.label77.Text = "Areas visita2";
+            this.label77.Text = "Áreas visita2";
             // 
             // label76
             // 
@@ -1307,7 +1308,7 @@
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(67, 13);
             this.label76.TabIndex = 43;
-            this.label76.Text = "Areas visita1";
+            this.label76.Text = "Áreas visita1";
             // 
             // comboBox109
             // 
@@ -1434,18 +1435,18 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(5, 65);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Vsita2";
+            this.label11.Text = "Visita2";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(5, 41);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 13);
+            this.label12.Size = new System.Drawing.Size(38, 13);
             this.label12.TabIndex = 1;
-            this.label12.Text = "Vsita1";
+            this.label12.Text = "Visita1";
             // 
             // panel7
             // 
@@ -1514,7 +1515,7 @@
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(67, 13);
             this.label57.TabIndex = 37;
-            this.label57.Text = "Areas visita2";
+            this.label57.Text = "Áreas visita2";
             // 
             // label56
             // 
@@ -1523,7 +1524,7 @@
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(67, 13);
             this.label56.TabIndex = 38;
-            this.label56.Text = "Areas visita1";
+            this.label56.Text = "Áreas visita1";
             // 
             // label55
             // 
@@ -1628,18 +1629,18 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(5, 65);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 13);
+            this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 3;
-            this.label13.Text = "Vsita2";
+            this.label13.Text = "Visita2";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(5, 42);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 13);
+            this.label14.Size = new System.Drawing.Size(38, 13);
             this.label14.TabIndex = 1;
-            this.label14.Text = "Vsita1";
+            this.label14.Text = "Visita1";
             // 
             // panel8
             // 
@@ -1685,7 +1686,7 @@
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(67, 13);
             this.label68.TabIndex = 42;
-            this.label68.Text = "Areas visita2";
+            this.label68.Text = "Áreas visita2";
             // 
             // label67
             // 
@@ -1694,7 +1695,7 @@
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(67, 13);
             this.label67.TabIndex = 42;
-            this.label67.Text = "Areas visita1";
+            this.label67.Text = "Áreas visita1";
             // 
             // comboBox91
             // 
@@ -1821,18 +1822,18 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(3, 68);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 13);
+            this.label15.Size = new System.Drawing.Size(38, 13);
             this.label15.TabIndex = 3;
-            this.label15.Text = "Vsita2";
+            this.label15.Text = "Visita2";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(5, 44);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 13);
+            this.label16.Size = new System.Drawing.Size(38, 13);
             this.label16.TabIndex = 1;
-            this.label16.Text = "Vsita1";
+            this.label16.Text = "Visita1";
             // 
             // panel9
             // 
@@ -1878,7 +1879,7 @@
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(67, 13);
             this.label80.TabIndex = 46;
-            this.label80.Text = "Areas visita2";
+            this.label80.Text = "Áreas visita2";
             // 
             // label79
             // 
@@ -1887,7 +1888,7 @@
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(67, 13);
             this.label79.TabIndex = 46;
-            this.label79.Text = "Areas visita1";
+            this.label79.Text = "Áreas visita1";
             // 
             // comboBox115
             // 
@@ -2014,18 +2015,18 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(3, 68);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(36, 13);
+            this.label17.Size = new System.Drawing.Size(38, 13);
             this.label17.TabIndex = 3;
-            this.label17.Text = "Vsita2";
+            this.label17.Text = "Visita2";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(3, 40);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(36, 13);
+            this.label18.Size = new System.Drawing.Size(38, 13);
             this.label18.TabIndex = 1;
-            this.label18.Text = "Vsita1";
+            this.label18.Text = "Visita1";
             // 
             // panel10
             // 
@@ -2093,7 +2094,7 @@
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(67, 13);
             this.label60.TabIndex = 42;
-            this.label60.Text = "Areas visita2";
+            this.label60.Text = "Áreas visita2";
             // 
             // label59
             // 
@@ -2102,7 +2103,7 @@
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(67, 13);
             this.label59.TabIndex = 40;
-            this.label59.Text = "Areas visita1";
+            this.label59.Text = "Áreas visita1";
             // 
             // comboBox69
             // 
@@ -2207,18 +2208,18 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(3, 63);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(36, 13);
+            this.label19.Size = new System.Drawing.Size(38, 13);
             this.label19.TabIndex = 3;
-            this.label19.Text = "Vsita2";
+            this.label19.Text = "Visita2";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(3, 39);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(36, 13);
+            this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 1;
-            this.label20.Text = "Vsita1";
+            this.label20.Text = "Visita1";
             // 
             // panel11
             // 
@@ -2264,7 +2265,7 @@
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(67, 13);
             this.label71.TabIndex = 49;
-            this.label71.Text = "Areas visita2";
+            this.label71.Text = "Áreas visita2";
             // 
             // label70
             // 
@@ -2273,7 +2274,7 @@
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(67, 13);
             this.label70.TabIndex = 48;
-            this.label70.Text = "Areas visita1";
+            this.label70.Text = "Áreas visita1";
             // 
             // comboBox97
             // 
@@ -2400,18 +2401,18 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(3, 66);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(36, 13);
+            this.label21.Size = new System.Drawing.Size(38, 13);
             this.label21.TabIndex = 3;
-            this.label21.Text = "Vsita2";
+            this.label21.Text = "Visita2";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(3, 42);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 13);
+            this.label22.Size = new System.Drawing.Size(38, 13);
             this.label22.TabIndex = 1;
-            this.label22.Text = "Vsita1";
+            this.label22.Text = "Visita1";
             // 
             // panel12
             // 
@@ -2457,7 +2458,7 @@
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(67, 13);
             this.label83.TabIndex = 51;
-            this.label83.Text = "Areas visita2";
+            this.label83.Text = "Áreas visita2";
             // 
             // label82
             // 
@@ -2466,7 +2467,7 @@
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(67, 13);
             this.label82.TabIndex = 51;
-            this.label82.Text = "Areas visita1";
+            this.label82.Text = "Áreas visita1";
             // 
             // comboBox121
             // 
@@ -2593,18 +2594,18 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(3, 64);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(36, 13);
+            this.label23.Size = new System.Drawing.Size(38, 13);
             this.label23.TabIndex = 3;
-            this.label23.Text = "Vsita2";
+            this.label23.Text = "Visita2";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(3, 37);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(36, 13);
+            this.label24.Size = new System.Drawing.Size(38, 13);
             this.label24.TabIndex = 1;
-            this.label24.Text = "Vsita1";
+            this.label24.Text = "Visita1";
             // 
             // comboBox1
             // 
@@ -2621,7 +2622,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(105, 53);
             this.button13.TabIndex = 16;
-            this.button13.Text = "Guardar Planificacion";
+            this.button13.Text = "Guardar Planificación";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -2634,11 +2635,19 @@
             this.textBox1.TabIndex = 17;
             this.textBox1.Text = "Q";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(1184, 160);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 18;
+            // 
             // PeriocidadQuincenal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 686);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.button13);
@@ -2656,7 +2665,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PeriocidadQuincenal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PeriocidadQuincenal";
+            this.Text = "Periocidad Quincenal";
             this.Load += new System.EventHandler(this.PeriocidadQuincenal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -2932,5 +2941,6 @@
         private System.Windows.Forms.ComboBox comboBox117;
         private System.Windows.Forms.ComboBox comboBox116;
         private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
     }
 }

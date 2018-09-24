@@ -11,23 +11,23 @@ namespace Project.BussinessRules
         int cod;
         string rut;
         string nombre;
-      
+
         string estado;
 
-        public Tecnico(int cod, string rut, string nombre,string estado)
+        public Tecnico(int cod, string rut, string nombre, string estado)
         {
             this.Cod = cod;
             this.Rut = rut;
             this.Nombre = nombre;
-            
+
             this.Estado = estado;
-            
+
 
         }
 
         public Tecnico(string rut, string nombre, string estado)
         {
-           
+
             this.Rut = rut;
             this.Nombre = nombre;
 
@@ -36,23 +36,29 @@ namespace Project.BussinessRules
 
         }
 
-     
-        public Tecnico(int cod,string nombre)
+
+        public Tecnico(int cod, string nombre)
         {
             this.Cod = cod;
-          
+
             this.Nombre = nombre;
-           
+
 
 
         }
         public Tecnico(string rut, string nombre)
         {
-            
+
             this.Rut = rut;
             this.Nombre = nombre;
-           
-          
+
+
+
+        }
+        public Tecnico(int cod)
+        {
+            this.Cod = cod;
+
 
         }
         public string Rut
@@ -76,7 +82,7 @@ namespace Project.BussinessRules
 
         }
 
-      
+
         public string Estado
         {
             get { return estado; }

@@ -20,7 +20,7 @@ namespace Project.Esampm
         private void button1_Click(object sender, EventArgs e)
         {
             InformePlanificados inf = new InformePlanificados();
-            inf.MdiParent = Form1.ActiveForm;
+            inf.MdiParent = Principal.ActiveForm;
             inf.Show();
 
         }
@@ -28,49 +28,49 @@ namespace Project.Esampm
         private void button2_Click(object sender, EventArgs e)
         {
             Informe inf = new Informe();
-            inf.MdiParent = Form1.ActiveForm;
+            inf.MdiParent = Principal.ActiveForm;
             inf.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             InformeLugaresSinPlanificacion inf = new InformeLugaresSinPlanificacion();
-            inf.MdiParent = Form1.ActiveForm;
+            inf.MdiParent = Principal.ActiveForm;
             inf.Show(); ;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             InformeServiciosPlanificados inf = new InformeServiciosPlanificados();
-            inf.MdiParent = Form1.ActiveForm;
+            inf.MdiParent = Principal.ActiveForm;
             inf.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             InformeServicioReplanificados infr = new InformeServicioReplanificados();
-            infr.MdiParent = Form1.ActiveForm;
+            infr.MdiParent = Principal.ActiveForm;
             infr.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             InformeServicioRealizados infr = new InformeServicioRealizados();
-            infr.MdiParent = Form1.ActiveForm;
+            infr.MdiParent = Principal.ActiveForm;
             infr.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             InformeServicioNoRealizados infnore = new InformeServicioNoRealizados();
-            infnore.MdiParent = Form1.ActiveForm;
+            infnore.MdiParent = Principal.ActiveForm;
             infnore.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             InformeServicioSupendido infs = new InformeServicioSupendido();
-            infs.MdiParent = Form1.ActiveForm;
+            infs.MdiParent = Principal.ActiveForm;
             infs.Show();
         }
 
@@ -82,13 +82,35 @@ namespace Project.Esampm
         private void button10_Click(object sender, EventArgs e)
         {
             Graficos gr = new Graficos();
-            gr.MdiParent = Form1.ActiveForm;
+            gr.MdiParent = Principal.ActiveForm;
+            gr.textBox1.Text = textBox1.Text;
             gr.Show();
         }
 
         private void OpcionInforme_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+          InformeSModificados gr = new InformeSModificados();
+            gr.MdiParent = Principal.ActiveForm;
+            gr.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            InformeDescripciones gr = new InformeDescripciones();
+            gr.MdiParent = Principal.ActiveForm;
+            gr.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            BonodeRendimiento gr = new BonodeRendimiento();
+            gr.MdiParent = Principal.ActiveForm;
+            gr.Show();
         }
     }
 }

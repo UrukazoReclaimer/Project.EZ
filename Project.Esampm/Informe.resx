@@ -123,10 +123,13 @@
   <metadata name="Numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="LugardeSs.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Lugardetratamiento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Servicio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Area.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="NOti.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -144,8 +147,11 @@
   <metadata name="Doc.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="textBox2.Text" xml:space="preserve">
-    <value>Acuso recibo de que en este momento estoy recepcionando conforme las OTs  y toda la documentación anexa indicada más arriba . Declaro, además, que he revisado cada uno de los lugares y 
+    <value>Acuso recibo de que en este momento estoy recepcionando conforme las OTs  y toda la documentación anexa indicada más arriba. Declaro, además, que he revisado cada uno de los lugares y 
 los servicios que realizaré en esta ruta y que, en función de esto, llevo todos los materiales necesarios para realizar adecuadamente mi trabajo según el “Listado de Materiales para salida a 
 Terreno” que es de mi conocimiento y está en mi poder. Además, declaro que poseo y transportaré en el vehículo que se me ha asignado, un archivador con toda la documentación descrita en el 
 “Listado de Documentos en Archivador del aplicador para Salida a Terreno”, documento del cual poseo una copia.</value>

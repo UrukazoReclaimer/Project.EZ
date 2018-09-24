@@ -6,40 +6,41 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class Area
+    public class Area
     {
-       int cod;
-       string nombreArea;
+        int cod;
+        string nombreArea;
 
 
 
-       public Area(int cod, string nombreArea) 
-       
-       {
-           this.Cod = cod;
-           this.NombreArea = nombreArea;
-       
-       }
+        public Area(int cod, string nombreArea)
+        {
+            this.Cod = cod;
+            this.NombreArea = nombreArea;
 
-       public Area(string nombreArea)
-       {
-           this.NombreArea = nombreArea;
-       
-       
-       }
+        }
 
-       public int Cod {
+        public Area(string nombreArea)
+        {
+            this.NombreArea = nombreArea;
 
-           get { return cod; }
-           set { cod = value; }
-       
-       }
 
-       public string NombreArea {
+        }
 
-           get { return nombreArea; }
-           set { nombreArea = value; }
-       }
+        public int Cod
+        {
+
+            get { return cod; }
+            set { cod = value; }
+
+        }
+
+        public string NombreArea
+        {
+
+            get { return nombreArea; }
+            set { nombreArea = value; }
+        }
 
     }
 }

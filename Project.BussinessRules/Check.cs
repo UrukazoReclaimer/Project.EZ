@@ -20,8 +20,9 @@ namespace Project.BussinessRules
         string periodicidad;
         string doc;
         string iden;
+        string tecnico;
 
-        public Check(int cod, string certificado, string obs,string fecha, string periodicidad, string iden)
+        public Check(int cod, string certificado, string obs, string fecha, string periodicidad, string iden)
         {
             this.Cod = cod;
             this.Certificado = certificado;
@@ -29,45 +30,51 @@ namespace Project.BussinessRules
             this.Fecha = fecha;
             this.Periodicidad = periodicidad;
             this.Iden = iden;
-        
+
         }
-        public Check(string certificado, string obs,string fecha ,string periodicidad , string iden)
+        //
+        public Check(string certificado, string obs, string fecha, string periodicidad, string iden, string tecnico)
         {
             this.Certificado = certificado;
             this.Obs = obs;
             this.Fecha = fecha;
             this.Periodicidad = periodicidad;
             this.Iden = iden;
+            this.Tecnico = tecnico;
+
+        }
+
+        public Check(string fecha, string numero, string lugar, string ser, string oti, string plano, string doc)
+        {
+            this.Fecha = fecha;
+            this.Numero = numero;
+            this.Lugar = lugar;
+            this.Ser = ser;
+            this.Plano = plano;
+            this.Noti = oti;
+            this.Doc = doc;
+
 
 
         }
 
-           public Check(string fecha, string numero, string lugar, string ser, string oti, string plano, string doc)
-            {
-                this.Fecha = fecha;
-                this.Numero = numero;
-                this.Lugar = lugar;
-                this.Ser = ser;
-                this.Plano = plano;
-                this.Noti=oti;
-                this.Doc = doc;
 
+        public Check(int cod)
+        {
+            this.Cod = cod;
 
+        }
+        public Check(string tecnico)
+        {
+            this.Tecnico = tecnico;
 
-            }
-
-
-           public Check(int cod)
-           {
-               this.Cod = cod;
-               
-           }
+        }
 
 
         public int Cod
         {
             get { return cod; }
-            set {cod = value; }
+            set { cod = value; }
         }
 
         public string Numero
@@ -98,7 +105,7 @@ namespace Project.BussinessRules
             set { oti = value; }
         }
 
-     
+
 
         public string Certificado
         {
@@ -136,6 +143,10 @@ namespace Project.BussinessRules
             get { return iden; }
             set { iden = value; }
         }
-        
+        public string Tecnico
+        {
+            get { return tecnico; }
+            set { tecnico = value; }
+        }
     }
 }

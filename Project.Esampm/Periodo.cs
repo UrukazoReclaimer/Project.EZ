@@ -21,7 +21,7 @@ namespace Project.Esampm
         {
             PlanillaServicio pl = new PlanillaServicio(comboBox1.Text);
 
-            pl.MdiParent = Form1.ActiveForm;
+            pl.MdiParent = Principal.ActiveForm;
             pl.Show();
             pl.textBox3.Text = this.comboBox1.Text;
         }

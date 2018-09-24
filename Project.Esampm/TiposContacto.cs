@@ -20,21 +20,32 @@ namespace Project.Esampm
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
+
+            CatalogoCliente co = new CatalogoCliente();
+            List<LugarTratamiento> lo = co.getLtracod(Convert.ToString(comboBox5.Text));
+            this.comboBox6.DataSource = lo;
+            this.comboBox6.DisplayMember = "cod";
+
+            this.comboBox6.ValueMember = "cod";
 
            
 
           
             CatalogoContacto cc = new CatalogoContacto();
-            Contactocliente con = new Contactocliente(Convert.ToInt32(comboBox3.Text),comboBox4.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
-            cc.addContactocliente(con);
-            Contactocliente con1 = new Contactocliente(Convert.ToInt32(comboBox3.Text),comboBox4.Text, textBox8.Text, textBox7.Text, textBox6.Text, textBox5.Text);
-            cc.addContactocliente(con1);
+            Contacto con = new Contacto(Convert.ToInt32(comboBox6.Text), textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            cc.addContacto(con);
+            Contacto con1 = new Contacto(Convert.ToInt32(comboBox6.Text),textBox8.Text, textBox7.Text, textBox6.Text, textBox5.Text);
+            cc.addContacto(con1);
 
             MessageBox.Show("Registro de contacto realizado");
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TiposContacto_Load(object sender, EventArgs e)
         {
 
         }

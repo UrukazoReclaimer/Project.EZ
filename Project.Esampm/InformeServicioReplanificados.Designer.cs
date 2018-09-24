@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label3);
@@ -81,6 +83,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 214);
             this.panel1.TabIndex = 2;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(262, 104);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(82, 32);
+            this.button15.TabIndex = 56;
+            this.button15.Text = "Generar Excel";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // comboBox1
             // 
@@ -142,6 +154,8 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Todos"});
@@ -172,9 +186,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(47, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Lugartratamiento";
+            this.label6.Text = "Lugar tratamiento";
             // 
             // label5
             // 
@@ -348,7 +362,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "InformeServicioReplanificados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InformeServicioReplanificados";
+            this.Text = "Informe Servicio Replanificado";
             this.Load += new System.EventHandler(this.InformeServicioReplanificados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -388,5 +402,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Button button15;
     }
 }

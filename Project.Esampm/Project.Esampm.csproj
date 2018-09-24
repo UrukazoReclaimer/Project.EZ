@@ -13,7 +13,11 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\Urukazo\Desktop\Ejecutable20122016\</PublishUrl>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <PublishUrl>C:\Users\Urukazo\Desktop\Ejecutable\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +28,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>87</ApplicationRevision>
+    <ApplicationRevision>247</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -33,13 +37,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <DebugType>Full</DebugType>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>True</Prefer32Bit>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -62,7 +66,23 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>True</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="esamDataSet9.Designer.cs">
@@ -74,11 +94,24 @@
     <Reference Include="itextsharp.pdfa">
       <HintPath>..\..\itextsharp.pdfa.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
@@ -93,29 +126,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actualizadopor.cs" />
+    <Compile Include="Anclado.cs" />
+    <Compile Include="Arbol.cs" />
+    <Compile Include="Basura.cs" />
+    <Compile Include="Baño.cs" />
+    <Compile Include="BonodeRendimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BonodeRendimiento.Designer.cs">
+      <DependentUpon>BonodeRendimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrador.cs" />
+    <Compile Include="Caja.cs" />
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cancha.cs" />
+    <Compile Include="Circulo.cs" />
+    <Compile Include="Cuadrado.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Dibujo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dibujo.Designer.cs">
+      <DependentUpon>Dibujo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditorPlanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorPlanos.Designer.cs">
+      <DependentUpon>EditorPlanos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entrada.Designer.cs">
       <DependentUpon>Entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Eplano.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Eplano.Designer.cs">
+      <DependentUpon>Eplano.cs</DependentUpon>
     </Compile>
+    <Compile Include="Escalera.cs" />
+    <Compile Include="Estacionamiento.cs" />
+    <Compile Include="Estanque.cs" />
+    <Compile Include="fillCirculo.cs" />
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forma.cs" />
+    <Compile Include="Glosario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Glosario.Designer.cs">
+      <DependentUpon>Glosario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goma.cs" />
+    <Compile Include="Gota.cs" />
     <Compile Include="Graficos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Graficos.Designer.cs">
       <DependentUpon>Graficos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Graficos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graficos2.Designer.cs">
+      <DependentUpon>Graficos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialDispositivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialDispositivos.Designer.cs">
+      <DependentUpon>HistorialDispositivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeDescripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeDescripciones.Designer.cs">
+      <DependentUpon>InformeDescripciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="InformeLugaresSinPlanificacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InformeLugaresSinPlanificacion.Designer.cs">
       <DependentUpon>InformeLugaresSinPlanificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeSModificados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeSModificados.Designer.cs">
+      <DependentUpon>InformeSModificados.cs</DependentUpon>
     </Compile>
     <Compile Include="InformeServicioNoRealizados.cs">
       <SubType>Form</SubType>
@@ -147,11 +258,97 @@
     <Compile Include="InformeServicioSupendido.Designer.cs">
       <DependentUpon>InformeServicioSupendido.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngresarAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarAuditoria.Designer.cs">
+      <DependentUpon>IngresarAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insecto.cs" />
+    <Compile Include="Lapiz.cs" />
+    <Compile Include="LapizB.cs" />
+    <Compile Include="LDD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LDD.Designer.cs">
+      <DependentUpon>LDD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line.cs" />
+    <Compile Include="Marco.cs" />
+    <Compile Include="NumeroPlano.cs" />
+    <Compile Include="Otros.cs" />
+    <Compile Include="Paint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paint.Designer.cs">
+      <DependentUpon>Paint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Palabras.cs" />
+    <Compile Include="PanelDeNoConformidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelDeNoConformidades.Designer.cs">
+      <DependentUpon>PanelDeNoConformidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="periodicidadDemoliciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="periodicidadDemoliciones.Designer.cs">
+      <DependentUpon>periodicidadDemoliciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="PeriodicidadTrimensual.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PeriodicidadTrimensual.Designer.cs">
       <DependentUpon>PeriodicidadTrimensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanosEsam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanosEsam.Designer.cs">
+      <DependentUpon>PlanosEsam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanosEsamV2cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanosEsamV2cs.Designer.cs">
+      <DependentUpon>PlanosEsamV2cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portal.Designer.cs">
+      <DependentUpon>Portal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozo.cs" />
+    <Compile Include="Privilegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Privilegios.Designer.cs">
+      <DependentUpon>Privilegios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba2.Designer.cs">
+      <DependentUpon>Prueba2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pruebapaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pruebapaint.Designer.cs">
+      <DependentUpon>pruebapaint.cs</DependentUpon>
     </Compile>
     <Compile Include="RDispositivo.cs">
       <SubType>Form</SubType>
@@ -183,12 +380,6 @@
     <Compile Include="IngresarClientes.Designer.cs">
       <DependentUpon>IngresarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="IngresarLugarTratamiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IngresarLugarTratamiento.Designer.cs">
-      <DependentUpon>IngresarLugarTratamiento.cs</DependentUpon>
-    </Compile>
     <Compile Include="IngresarPLano.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +410,8 @@
     <Compile Include="RDispositivoTemporal.Designer.cs">
       <DependentUpon>RDispositivoTemporal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rectangulo.cs" />
+    <Compile Include="RectanguloFill.cs" />
     <Compile Include="RegistrarServicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +504,9 @@
     <Compile Include="Replanificar.Designer.cs">
       <DependentUpon>Replanificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="RojoRectangulo.cs" />
+    <Compile Include="Rombo.cs" />
+    <Compile Include="Rosa.cs" />
     <Compile Include="Suspendido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +525,7 @@
     <Compile Include="TableroPeriodicidad.Designer.cs">
       <DependentUpon>TableroPeriodicidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Techado.cs" />
     <Compile Include="TipodeRetiro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +544,9 @@
     <Compile Include="TiposContacto.Designer.cs">
       <DependentUpon>TiposContacto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Triangulo.cs" />
+    <Compile Include="Triangulo1.cs" />
+    <Compile Include="Tubo.cs" />
     <Compile Include="Vacaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,17 +554,49 @@
       <DependentUpon>Vacaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="validar.cs" />
+    <Compile Include="Zanja.cs" />
+    <Compile Include="Zona.cs" />
+    <EmbeddedResource Include="BonodeRendimiento.resx">
+      <DependentUpon>BonodeRendimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dibujo.resx">
+      <DependentUpon>Dibujo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditorPlanos.resx">
+      <DependentUpon>EditorPlanos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Eplano.resx">
+      <DependentUpon>Eplano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Glosario.resx">
+      <DependentUpon>Glosario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Graficos.resx">
       <DependentUpon>Graficos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Graficos2.resx">
+      <DependentUpon>Graficos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialDispositivos.resx">
+      <DependentUpon>HistorialDispositivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeDescripciones.resx">
+      <DependentUpon>InformeDescripciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InformeLugaresSinPlanificacion.resx">
       <DependentUpon>InformeLugaresSinPlanificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeSModificados.resx">
+      <DependentUpon>InformeSModificados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformeServicioNoRealizados.resx">
       <DependentUpon>InformeServicioNoRealizados.cs</DependentUpon>
@@ -381,8 +613,44 @@
     <EmbeddedResource Include="InformeServicioSupendido.resx">
       <DependentUpon>InformeServicioSupendido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IngresarAuditoria.resx">
+      <DependentUpon>IngresarAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LDD.resx">
+      <DependentUpon>LDD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paint.resx">
+      <DependentUpon>Paint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDeNoConformidades.resx">
+      <DependentUpon>PanelDeNoConformidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="periodicidadDemoliciones.resx">
+      <DependentUpon>periodicidadDemoliciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PeriodicidadTrimensual.resx">
       <DependentUpon>PeriodicidadTrimensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanosEsam.resx">
+      <DependentUpon>PlanosEsam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanosEsamV2cs.resx">
+      <DependentUpon>PlanosEsamV2cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portal.resx">
+      <DependentUpon>Portal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Privilegios.resx">
+      <DependentUpon>Privilegios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba2.resx">
+      <DependentUpon>Prueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pruebapaint.resx">
+      <DependentUpon>pruebapaint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDispositivo.resx">
       <DependentUpon>RDispositivo.cs</DependentUpon>
@@ -398,9 +666,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarClientes.resx">
       <DependentUpon>IngresarClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IngresarLugarTratamiento.resx">
-      <DependentUpon>IngresarLugarTratamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarPLano.resx">
       <DependentUpon>IngresarPLano.cs</DependentUpon>
@@ -461,14 +726,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Replanificar.resx">
       <DependentUpon>Replanificar.cs</DependentUpon>
     </EmbeddedResource>
@@ -548,6 +808,35 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="home.ico" />
+    <None Include="Resources\Ancladoico.jpeg" />
+    <None Include="Resources\Ancladoico.bmp" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\Ancladoico.ico" />
+    <None Include="Resources\AnclaIco.ico" />
+    <None Include="Resources\Anclado.jpg" />
+    <None Include="Resources\cargar.jpg" />
+    <None Include="Resources\guardar.png" />
+    <None Include="Resources\63572.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -355,6 +355,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button13 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -3557,11 +3558,19 @@
             this.listBox1.TabIndex = 0;
             this.listBox1.Visible = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1269, 162);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(75, 20);
+            this.textBox1.TabIndex = 24;
+            // 
             // PeriodicidadSemanal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 741);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.comboBox1);
@@ -3579,7 +3588,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PeriodicidadSemanal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Periodicidad Semanal";
             this.Load += new System.EventHandler(this.PeriodicidadSemanal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -3606,6 +3615,7 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -3938,5 +3948,6 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Label label64;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

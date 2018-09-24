@@ -36,6 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +56,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(75, 21);
             this.comboBox1.TabIndex = 6;
-            this.comboBox1.Visible = false;
             // 
             // dateTimePicker1
             // 
@@ -100,7 +100,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(75, 21);
             this.comboBox2.TabIndex = 11;
-            this.comboBox2.Visible = false;
             // 
             // label2
             // 
@@ -111,11 +110,19 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Escriba en el cuador el porque del retiro";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(323, 84);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(51, 20);
+            this.textBox2.TabIndex = 24;
+            // 
             // RDispositivoTemporal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 339);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.dateTimePicker1);
@@ -137,11 +144,12 @@
 
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class InformeRDC
+    public class InformeRDC
     {
         string cliente;
         string tipolugar;
@@ -23,7 +23,7 @@ namespace Project.BussinessRules
 
 
 
-          public InformeRDC(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios,string tecnico ,string noti,string solicitud,  string motivo)
+        public InformeRDC(string cliente, string tipolugar, string lugar, string nplano, string ruta, string fecha, string periodicidad, string servicios, string tecnico, string noti, string solicitud, string motivo)
         {
             this.Cliente = cliente;
             this.TipoLugar = tipolugar;
@@ -37,105 +37,105 @@ namespace Project.BussinessRules
             this.Noti = noti;
             this.Solicitud = solicitud;
             this.Motivo = motivo;
-        
+
         }
 
-          public string Cliente
-          {
+        public string Cliente
+        {
 
-              get { return cliente; }
-              set { cliente = value; }
+            get { return cliente; }
+            set { cliente = value; }
 
-          }
+        }
 
-          public string TipoLugar
-          {
+        public string TipoLugar
+        {
 
-              get { return tipolugar; }
-              set { tipolugar = value; }
+            get { return tipolugar; }
+            set { tipolugar = value; }
 
-          }
+        }
 
-          public string Lugar
-          {
+        public string Lugar
+        {
 
-              get { return lugar; }
-              set { lugar = value; }
+            get { return lugar; }
+            set { lugar = value; }
 
-          }
+        }
 
-          public string Nplano
-          {
+        public string Nplano
+        {
 
-              get { return nplano; }
-              set { nplano = value; }
+            get { return nplano; }
+            set { nplano = value; }
 
-          }
+        }
 
-          public string Ruta
-          {
+        public string Ruta
+        {
 
-              get { return ruta; }
-              set { ruta = value; }
+            get { return ruta; }
+            set { ruta = value; }
 
-          }
+        }
 
-          public string Fecha
-          {
+        public string Fecha
+        {
 
-              get { return fecha; }
-              set { fecha = value; }
+            get { return fecha; }
+            set { fecha = value; }
 
-          }
+        }
 
-          public string Periodicidad
-          {
+        public string Periodicidad
+        {
 
-              get { return periodicidad; }
-              set { periodicidad = value; }
+            get { return periodicidad; }
+            set { periodicidad = value; }
 
-          }
+        }
 
-          public string Servicios
-          {
+        public string Servicios
+        {
 
-              get { return servicios; }
-              set { servicios = value; }
+            get { return servicios; }
+            set { servicios = value; }
 
-          }
+        }
 
 
-          public string Tecnico
-          {
+        public string Tecnico
+        {
 
-              get { return tecnico; }
-              set { tecnico = value; }
+            get { return tecnico; }
+            set { tecnico = value; }
 
-          }
+        }
 
-          public string Noti
-          {
+        public string Noti
+        {
 
-              get { return noti; }
-              set { noti = value; }
+            get { return noti; }
+            set { noti = value; }
 
-          }
+        }
 
-          public string Solicitud
-          {
+        public string Solicitud
+        {
 
-              get { return solicitud; }
-              set { solicitud = value; }
+            get { return solicitud; }
+            set { solicitud = value; }
 
-          }
+        }
 
-          public string Motivo
-          {
+        public string Motivo
+        {
 
-              get { return motivo; }
-              set { motivo = value; }
+            get { return motivo; }
+            set { motivo = value; }
 
-          }
+        }
     }
 
 }

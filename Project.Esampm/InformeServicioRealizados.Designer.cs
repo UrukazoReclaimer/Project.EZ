@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,6 +49,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoLugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +63,7 @@
             this.Tecnicos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Noti = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Consumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.Tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +71,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.comboBox6);
             this.panel1.Controls.Add(this.label7);
@@ -90,6 +94,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 264);
             this.panel1.TabIndex = 3;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(262, 105);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(82, 32);
+            this.button15.TabIndex = 56;
+            this.button15.Text = "Generar Excel";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // label8
             // 
@@ -196,6 +210,8 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Todos"});
@@ -227,9 +243,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(47, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Lugartratamiento";
+            this.label6.Text = "Lugar tratamiento";
             // 
             // label5
             // 
@@ -306,11 +322,44 @@
             this.Servicios,
             this.Tecnicos,
             this.Noti,
-            this.Consumo});
+            this.Consumo,
+            this.Tiempo});
             this.dataGridView1.Location = new System.Drawing.Point(12, 282);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(829, 150);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(378, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Visualizador";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "Explorer",
+            "Acrobat",
+            "Nitro"});
+            this.comboBox7.Location = new System.Drawing.Point(447, 12);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(75, 21);
+            this.comboBox7.TabIndex = 36;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(380, 91);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(176, 21);
+            this.button3.TabIndex = 57;
+            this.button3.Text = "Buscar Separado por servicios";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Cliente
             // 
@@ -378,39 +427,25 @@
             this.Consumo.HeaderText = "%Consumo";
             this.Consumo.Name = "Consumo";
             // 
-            // label9
+            // Tiempo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(378, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 13);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Visualizador";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Explorer",
-            "Acrobat",
-            "Nitro"});
-            this.comboBox7.Location = new System.Drawing.Point(447, 12);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(75, 21);
-            this.comboBox7.TabIndex = 36;
+            this.Tiempo.DataPropertyName = "Tiempo";
+            this.Tiempo.HeaderText = "Tiempo";
+            this.Tiempo.Name = "Tiempo";
             // 
             // InformeServicioRealizados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 455);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox7);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "InformeServicioRealizados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InformeServicioRealizados";
+            this.Text = "Informe Servicio Realizado";
             this.Load += new System.EventHandler(this.InformeServicioRealizados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -442,6 +477,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoLugar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lugar;
@@ -453,7 +492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tecnicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Noti;
         private System.Windows.Forms.DataGridViewTextBoxColumn Consumo;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tiempo;
     }
 }

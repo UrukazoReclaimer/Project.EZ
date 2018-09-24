@@ -37,6 +37,38 @@ namespace Project.Esampm
         {
 
         }
+        private void ExportarDataGridViewExcelPlanilla(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -152,7 +184,8 @@ namespace Project.Esampm
                 pdfDoc.Open();
 
                 iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance(@"\\STORAGE\\Public\\Esam compartido\\Informática\\esam.jpg");
-                //   iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\Urukazo\\Desktop\\respaldo bueno\\esam.jpg");
+               //    iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\Urukazo\\Desktop\\respaldo bueno\\esam.jpg");
+               //    iTextSharp.text.Image imagen1 = iTextSharp.text.Image.GetInstance("C:\\Users\\natal\\Desktop\\Ejecutableroot\\esam.jpg");
                 imagen1.BorderWidth = 0;
                 imagen1.Alignment = Element.ALIGN_LEFT;
                 float percentage = 0.0f;
@@ -177,6 +210,12 @@ namespace Project.Esampm
                     System.Diagnostics.Process.Start("IExplore.exe", folderPath + "Informe Planificaciones Con Observaciones" + "-" + dateTimePicker1.Text + ".pdf");
                 }
             }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            ExportarDataGridViewExcelPlanilla(dataGridView1);
+            MessageBox.Show("Exportación Realizada");
         }
 
         }

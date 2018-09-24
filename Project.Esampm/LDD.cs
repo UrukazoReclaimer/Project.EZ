@@ -46,7 +46,7 @@ namespace Project.Esampm
         }
         public void planificar(ComboBox tec)
         {
-
+            
             CatalogoPlanilla ca2 = new CatalogoPlanilla();
             List<Periodicidad> lu = ca2.getcodfech();
             this.comboBox15.DataSource = lu;
@@ -64,7 +64,7 @@ namespace Project.Esampm
                 // fecha.CustomFormat = "yyyy-MM-dd";
                 string b = "";
                 b = listfecha[index1].ToString();
-                Periodicidad pla = new Periodicidad(b, Convert.ToInt32(comboBox15.SelectedValue), 10, Convert.ToInt32(comboBox1.SelectedValue), 30, "", 0, "LDD", "", "");
+                Periodicidad pla = new Periodicidad(b, Convert.ToInt32(comboBox15.SelectedValue), 10, Convert.ToInt32(comboBox1.SelectedValue), "N/A", "", 0, "LDD", "P", "", "Primario", "", "");
                 ca.addfecha(pla);
 
                 if (index1 < listfecha.Count - 1)
@@ -78,6 +78,7 @@ namespace Project.Esampm
                 }
 
             }
+             
 
         }
         private void LDD_Load(object sender, EventArgs e)
@@ -95,6 +96,7 @@ namespace Project.Esampm
         private void button4_Click(object sender, EventArgs e)
         {
             comboBox3.Items.Remove(textBox1.Text);
+            listfecha.Remove(textBox1.Text);
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

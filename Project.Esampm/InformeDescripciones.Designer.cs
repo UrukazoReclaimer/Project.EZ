@@ -31,17 +31,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoLugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +42,18 @@
             this.Tecnicos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.General = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,9 +99,76 @@
             this.dataGridView1.Size = new System.Drawing.Size(962, 150);
             this.dataGridView1.TabIndex = 43;
             // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            // 
+            // TipoLugar
+            // 
+            this.TipoLugar.DataPropertyName = "TipoLugar";
+            this.TipoLugar.HeaderText = "TipoLugar";
+            this.TipoLugar.Name = "TipoLugar";
+            // 
+            // Lugar
+            // 
+            this.Lugar.DataPropertyName = "Lugar";
+            this.Lugar.HeaderText = "Lugar";
+            this.Lugar.Name = "Lugar";
+            // 
+            // NPlano
+            // 
+            this.NPlano.DataPropertyName = "NPlano";
+            this.NPlano.HeaderText = "NPlano";
+            this.NPlano.Name = "NPlano";
+            // 
+            // Ruta
+            // 
+            this.Ruta.DataPropertyName = "Ruta";
+            this.Ruta.HeaderText = "Ruta";
+            this.Ruta.Name = "Ruta";
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Periodicidad
+            // 
+            this.Periodicidad.DataPropertyName = "Periodicidad";
+            this.Periodicidad.HeaderText = "Periodicidad";
+            this.Periodicidad.Name = "Periodicidad";
+            // 
+            // Servicios
+            // 
+            this.Servicios.DataPropertyName = "Servicios";
+            this.Servicios.HeaderText = "Servicios";
+            this.Servicios.Name = "Servicios";
+            // 
+            // Tecnicos
+            // 
+            this.Tecnicos.DataPropertyName = "Tecnicos";
+            this.Tecnicos.HeaderText = "Tecncios";
+            this.Tecnicos.Name = "Tecnicos";
+            // 
+            // Observacion
+            // 
+            this.Observacion.DataPropertyName = "Particular";
+            this.Observacion.HeaderText = "Desc.Particular";
+            this.Observacion.Name = "Observacion";
+            // 
+            // General
+            // 
+            this.General.DataPropertyName = "General";
+            this.General.HeaderText = "Desc.General";
+            this.General.Name = "General";
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.comboBox4);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -116,8 +184,20 @@
             this.panel1.Size = new System.Drawing.Size(362, 214);
             this.panel1.TabIndex = 42;
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(275, 105);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(82, 32);
+            this.button15.TabIndex = 55;
+            this.button15.Text = "Generar Excel";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // comboBox4
             // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Todos"});
@@ -213,72 +293,6 @@
             this.comboBox2.TabIndex = 1;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // TipoLugar
-            // 
-            this.TipoLugar.DataPropertyName = "TipoLugar";
-            this.TipoLugar.HeaderText = "TipoLugar";
-            this.TipoLugar.Name = "TipoLugar";
-            // 
-            // Lugar
-            // 
-            this.Lugar.DataPropertyName = "Lugar";
-            this.Lugar.HeaderText = "Lugar";
-            this.Lugar.Name = "Lugar";
-            // 
-            // NPlano
-            // 
-            this.NPlano.DataPropertyName = "NPlano";
-            this.NPlano.HeaderText = "NPlano";
-            this.NPlano.Name = "NPlano";
-            // 
-            // Ruta
-            // 
-            this.Ruta.DataPropertyName = "Ruta";
-            this.Ruta.HeaderText = "Ruta";
-            this.Ruta.Name = "Ruta";
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Periodicidad
-            // 
-            this.Periodicidad.DataPropertyName = "Periodicidad";
-            this.Periodicidad.HeaderText = "Periodicidad";
-            this.Periodicidad.Name = "Periodicidad";
-            // 
-            // Servicios
-            // 
-            this.Servicios.DataPropertyName = "Servicios";
-            this.Servicios.HeaderText = "Servicios";
-            this.Servicios.Name = "Servicios";
-            // 
-            // Tecnicos
-            // 
-            this.Tecnicos.DataPropertyName = "Tecnicos";
-            this.Tecnicos.HeaderText = "Tecncios";
-            this.Tecnicos.Name = "Tecnicos";
-            // 
-            // Observacion
-            // 
-            this.Observacion.DataPropertyName = "Particular";
-            this.Observacion.HeaderText = "Desc.Particular";
-            this.Observacion.Name = "Observacion";
-            // 
-            // General
-            // 
-            this.General.DataPropertyName = "General";
-            this.General.HeaderText = "Desc.General";
-            this.General.Name = "General";
-            // 
             // InformeDescripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,5 +340,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tecnicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn General;
+        private System.Windows.Forms.Button button15;
     }
 }

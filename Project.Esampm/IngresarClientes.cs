@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project.BussinessRules;
 using System.Text.RegularExpressions;
+using Excel = Microsoft.Office.Interop.Excel;
+
 namespace Project.Esampm
 {
     public partial class IngresarClientes : Form
@@ -59,84 +61,101 @@ namespace Project.Esampm
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            CatalogoCliente ca = new CatalogoCliente();
-            if (comboBox5.Text == "")
+
+            CatalogoCliente ca3 = new CatalogoCliente();
+            List<cliente> la3 = ca3.getclierutcondition(textBox2.Text);
+            this.comboBox8.DataSource = la3;
+            this.comboBox8.DisplayMember = "cod";
+
+            this.comboBox8.ValueMember = "cod";
+
+            if (comboBox8.Items.Count >= 1)
             {
-                MessageBox.Show("Se debe ingresar un lugar de tratamiento");
+
+                MessageBox.Show("Cliente Existente");
+
             }
             else
             {
-               
-                validarRut(textBox2.Text);
-              
-                if (validarRut(textBox2.Text) == true)
+
+                CatalogoCliente ca = new CatalogoCliente();
+                if (comboBox5.Text == "")
                 {
-
-                    MessageBox.Show("Ingreso Valido");
-                    this.textBox6.Focus();
-
-                    LugarTratamiento cli = new LugarTratamiento(this.textBox1.Text, this.textBox2.Text, this.comboBox1.Text, this.comboBox5.Text, Convert.ToInt32(comboBox2.Text));
-                    ca.addCliente(cli);
-
-                    //------------------lugar de tratamiento
-
-                    cli = new LugarTratamiento(Convert.ToInt32(comboBox2.Text), this.textBox2.Text, comboBox5.Text, this.comboBox6.Text, this.comboBox3.Text);
-                    ca.addLugar(cli);
-
-
-
-                  
-                    List<cliente> la = ca.getmaxcodcli();
-                    this.comboBox2.DataSource = la;
-                    this.comboBox2.DisplayMember = "cod";                 
-                    this.comboBox2.ValueMember = "cod";
-
-
-                    CatalogoCliente co = new CatalogoCliente();
-                    List<LugarTratamiento> lo = co.getLtracod(Convert.ToString(comboBox5.Text));
-                    this.comboBox4.DataSource = lo;
-                    this.comboBox4.DisplayMember = "cod";               
-                    this.comboBox4.ValueMember = "cod";
-
-                    //--------------------contacto
-                    CatalogoContacto cc = new CatalogoContacto();
-                    Contacto con = new Contacto(Convert.ToInt32(comboBox4.Text), textBox5.Text, textBox6.Text, textBox7.Text, textBox9.Text);
-                    cc.addContacto(con);
-                    //--------plano
-
-
-
-
-                    CatalogoPlanocs cp = new CatalogoPlanocs();                  
-                    Plano pl = new Plano(textBox8.Text, Convert.ToInt32(comboBox4.Text), Convert.ToInt32(textBox8.Text));
-                    cp.addplano(pl);
-                    MessageBox.Show("Ingreso Plano Hecho");
-
-                    this.graData();
-
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-
-                    textBox4.Text = "";
-                    textBox5.Text = "";
-                    textBox6.Text = "";
-                    textBox7.Text = "";
-                    comboBox1.Text = "";
-                    textBox8.Text = "";
-                    comboBox5.Text = "";
-                    comboBox6.Text = "";
-
-
+                    MessageBox.Show("Se debe ingresar un lugar de tratamiento");
                 }
                 else
                 {
-                    MessageBox.Show("Teclee un dato valido", "ERROR",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    validarRut(textBox2.Text);
+
+                    if (validarRut(textBox2.Text) == true)
+                    {
+
+                        MessageBox.Show("Ingreso Valido");
+                        this.textBox6.Focus();
+
+                        LugarTratamiento cli = new LugarTratamiento(this.textBox1.Text, this.textBox2.Text, this.comboBox1.Text, this.comboBox5.Text, Convert.ToInt32(comboBox2.Text));
+                        ca.addCliente(cli);
+
+                        //------------------lugar de tratamiento
+
+                        cli = new LugarTratamiento(Convert.ToInt32(comboBox2.Text), this.textBox2.Text, comboBox5.Text, this.comboBox6.Text, comboBox10.Text, this.comboBox3.Text);
+                        ca.addLugar(cli);
+
+
+
+
+                        List<cliente> la = ca.getmaxcodcli();
+                        this.comboBox2.DataSource = la;
+                        this.comboBox2.DisplayMember = "cod";
+                        this.comboBox2.ValueMember = "cod";
+
+
+                        CatalogoCliente co = new CatalogoCliente();
+                        List<LugarTratamiento> lo = co.getLtracod(Convert.ToString(comboBox5.Text));
+                        this.comboBox4.DataSource = lo;
+                        this.comboBox4.DisplayMember = "cod";
+                        this.comboBox4.ValueMember = "cod";
+
+                        //--------------------contacto
+                        CatalogoContacto cc = new CatalogoContacto();
+                        Contacto con = new Contacto(Convert.ToInt32(comboBox4.Text), textBox5.Text, textBox6.Text, textBox7.Text, textBox9.Text);
+                        cc.addContacto(con);
+                        //--------plano
+
+
+
+
+                        CatalogoPlanocs cp = new CatalogoPlanocs();
+                        Plano pl = new Plano(textBox8.Text, Convert.ToInt32(comboBox4.Text));
+                        cp.addplano(pl);
+                        MessageBox.Show("Ingreso Plano Hecho");
+
+                        this.graData();
+
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        textBox7.Text = "";
+                        comboBox1.Text = "";
+                        textBox8.Text = "";
+                        comboBox5.Text = "";
+                        comboBox6.Text = "";
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Teclee un dato valido", "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
                 }
-
-
             }
-
             
         }
 
@@ -162,9 +181,8 @@ namespace Project.Esampm
             textBox2.Text = dataGridView1.CurrentRow.Cells["Rut"].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells["Clasificacion"].Value.ToString();
             comboBox7.Text = dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString();
-            comboBox5.Text ="";
-            
-            textBox8.Text = "";
+       //     comboBox5.Text ="";  
+       //     textBox8.Text = "";
         
            
         }
@@ -215,9 +233,7 @@ namespace Project.Esampm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            IngresarLugarTratamiento inh = new IngresarLugarTratamiento();
-
-            inh.Show();
+            
         }
 
         public void graData()
@@ -275,10 +291,10 @@ namespace Project.Esampm
             tip.comboBox3.DisplayMember = "cod";
            
             tip.comboBox3.ValueMember = "cod";
-
-            tip.comboBox4.Text = textBox2.Text;
-            tip.comboBox1.Text = textBox1.Text;
-            tip.comboBox2.Text = textBox1.Text;
+            tip.comboBox5.Text = comboBox5.Text;
+            tip.comboBox4.Text =  textBox2.Text;
+            tip.comboBox1.Text =  textBox1.Text;
+            tip.comboBox2.Text =  textBox1.Text;
     
             tip.Show();
         }
@@ -315,7 +331,7 @@ namespace Project.Esampm
         textBox4.Text = "";
         this.dataGridView1.DataSource = lista;
         this.dataGridView2.DataSource = invi;
-        this.dataGridView3.DataSource = invcon;  
+        this.dataGridView3.DataSource = invcon;   
         
     }
 
@@ -334,7 +350,7 @@ namespace Project.Esampm
             textBox2.Text = dataGridView2.CurrentRow.Cells["RutCliente"].Value.ToString();
             textBox8.Text = dataGridView2.CurrentRow.Cells["Plano"].Value.ToString();
             comboBox6.Text = dataGridView2.CurrentRow.Cells["RUTA"].Value.ToString();
-          
+            textBox10.Text = dataGridView2.CurrentRow.Cells["CODLUG"].Value.ToString();
      
         }
 
@@ -345,50 +361,98 @@ namespace Project.Esampm
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            CatalogoCliente ca = new CatalogoCliente();
-         LugarTratamiento   cli = new LugarTratamiento(Convert.ToInt32(comboBox7.Text), this.textBox2.Text, comboBox5.Text, this.comboBox6.Text,this.comboBox3.Text);
-            ca.addLugar(cli);
-        
-            List<cliente> la = ca.getmaxcodcli();
-            this.comboBox2.DataSource = la;
-            this.comboBox2.DisplayMember = "cod";
-         
+             CatalogoCliente ca1 = new CatalogoCliente();
+            List<LugarTratamiento> la3 = ca1.gettecnombrelugarcondition(comboBox5.Text);
+            this.comboBox12.DataSource = la3;
+            this.comboBox12.DisplayMember = "NombreTratamiento";
+
             this.comboBox2.ValueMember = "cod";
 
+            if (comboBox12.Items.Count >= 1)
+            {
 
-            CatalogoCliente co = new CatalogoCliente();
-            List<LugarTratamiento> lo = co.getLtracod(Convert.ToString(comboBox5.Text));
-            this.comboBox4.DataSource = lo;
-            this.comboBox4.DisplayMember = "cod";
-           
-            this.comboBox4.ValueMember = "cod";
+                MessageBox.Show("Nombre Existente");
 
-            //--------------------contacto
-            CatalogoContacto cc = new CatalogoContacto();
-            Contacto con = new Contacto(Convert.ToInt32(comboBox4.Text), textBox5.Text, textBox6.Text, textBox7.Text, textBox9.Text);
-            cc.addContacto(con);
-            //--------plano
+            }
+            else
+            {
+                if (textBox8.Text == "" || comboBox6.Text == "" || comboBox10.Text == "" || comboBox3.Text == "")
+                {
+                    MessageBox.Show("Faltan Datos");
+                }
+                else
+                {
+                    if (textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "")
+                    {
+                        MessageBox.Show("Faltan Datos en Contactos");
+
+                    }
+                    else
+                    {
+                        CatalogoCliente ca2 = new CatalogoCliente();
+                        List<Plano> la2 = ca2.getlugconditionplano(textBox8.Text);
+                        this.comboBox11.DataSource = la2;
+                        this.comboBox11.DisplayMember = "lugartratamiento";
+
+                        this.comboBox11.ValueMember = "cod";
+
+                        if (comboBox11.Items.Count >= 1)
+                        {
+
+                            MessageBox.Show("Un lugar ya contiene este numero de plano" + ":" + " " + comboBox11.Text);
+
+                        }
 
 
 
 
-            CatalogoPlanocs cp = new CatalogoPlanocs();
-            Plano pl = new Plano(textBox8.Text, Convert.ToInt32(comboBox4.Text));
-            cp.addplano(pl);
-            MessageBox.Show("Ingreso de Nuevo lugar y Plano Hecho");
 
-            this.graData();
+                        CatalogoCliente ca = new CatalogoCliente();
+                        LugarTratamiento cli = new LugarTratamiento(Convert.ToInt32(comboBox7.Text), this.textBox2.Text, comboBox5.Text, this.comboBox6.Text, this.comboBox3.Text, comboBox10.Text);
+                        ca.addLugar(cli);
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-          
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            comboBox1.Text = "";
-            comboBox2.Text = "";
+                        List<cliente> la = ca.getmaxcodcli();
+                        this.comboBox2.DataSource = la;
+                        this.comboBox2.DisplayMember = "cod";
 
+                        this.comboBox2.ValueMember = "cod";
+
+
+                        CatalogoCliente co = new CatalogoCliente();
+                        List<LugarTratamiento> lo = co.getLtracod(Convert.ToString(comboBox5.Text));
+                        this.comboBox4.DataSource = lo;
+                        this.comboBox4.DisplayMember = "cod";
+
+                        this.comboBox4.ValueMember = "cod";
+
+                        //--------------------contacto
+                        CatalogoContacto cc = new CatalogoContacto();
+                        Contacto con = new Contacto(Convert.ToInt32(comboBox4.Text), textBox5.Text, textBox6.Text, textBox7.Text, textBox9.Text);
+                        cc.addContacto(con);
+                        //--------plano
+
+
+
+
+                        CatalogoPlanocs cp = new CatalogoPlanocs();
+                        Plano pl = new Plano(textBox8.Text, Convert.ToInt32(comboBox4.Text));
+                        cp.addplano(pl);
+                        MessageBox.Show("Ingreso de Nuevo lugar y Plano Hecho");
+
+                        this.graData();
+
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        textBox7.Text = "";
+                        comboBox1.Text = "";
+                        comboBox2.Text = "";
+                    }
+                }
+            }
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -492,6 +556,362 @@ namespace Project.Esampm
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void ExportarDataGridViewExcelCliente(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        private void ExportarDataGridViewExcelLuagres(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < dataGridView2.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = dataGridView2.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        private void ExportarDataGridViewExcelContactos(DataGridView grd)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < dataGridView3.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = dataGridView3.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        private void ExportarDataGridViewExcelClientesContactos(DataGridView grd, DataGridView grd2)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < grd.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = grd.Columns[i - 1].HeaderText;
+                }
+                for (int i = 1; i < grd2.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i+5] = grd2.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+
+                for (int i = 0; i < grd2.Rows.Count - 1; i++)
+                {
+                    for (int j =0; j < grd2.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 6] = grd2.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        private void ExportarDataGridViewExcelClientesLugar(DataGridView grd, DataGridView grd2)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < grd.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = grd.Columns[i - 1].HeaderText;
+                }
+                for (int i = 1; i < grd2.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i + 5] = grd2.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+
+                for (int i = 0; i < grd2.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd2.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 6] = grd2.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        private void ExportarDataGridViewExcelLugarContacto(DataGridView grd, DataGridView grd2)
+        {
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
+            {
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 1; i < grd.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i] = grd.Columns[i - 1].HeaderText;
+                }
+                for (int i = 1; i < grd2.Columns.Count + 1; i++)
+                {
+                    hoja_trabajo.Cells[1, i + 7] = grd2.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value;
+                    }
+                }
+
+                for (int i = 0; i < grd2.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < grd2.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 2, j + 8] = grd2.Rows[i].Cells[j].Value;
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
+            }
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (comboBox9.Text =="")
+            {
+                MessageBox.Show("Debe Seleccionar Cuadro");
+            }
+            else
+            {
+
+
+                if (comboBox9.Text == "Cuadro Cliente")
+                {
+                    ExportarDataGridViewExcelCliente(dataGridView1);
+                }
+                if (comboBox9.Text == "Cuadro Lugares")
+                {
+                    ExportarDataGridViewExcelLuagres(dataGridView2);
+                }
+                if (comboBox9.Text == "Cuadro Lugar y Contactos")
+                {
+                    ExportarDataGridViewExcelContactos(dataGridView3);
+                }
+              
+               
+                MessageBox.Show("Exportación Finalizada");
+            }
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            CatalogoCliente cc = new CatalogoCliente();
+            LugarTratamiento lu = new LugarTratamiento(comboBox5.Text, comboBox6.Text,Convert.ToInt32(comboBox7.Text),textBox2.Text,Convert.ToInt32(textBox10.Text));
+            cc.modLugarrut(lu);
+            this.graData();
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                CatalogoCliente ac = new CatalogoCliente();
+                List<cliente> lista = new List<cliente>();
+                List<Inventariadoplano> invi = new List<Inventariadoplano>();
+                List<InventariadoCliente> invcon = new List<InventariadoCliente>();
+                invi = ac.mbuscarlugarplanoLUGAR(textBox11.Text);
+                lista = ac.mbuscarPlanillaLUGAR(textBox11.Text);
+                invcon = ac.mbuscarcontactoLUGAR(textBox11.Text);
+                textBox4.Text = "";
+                this.dataGridView1.DataSource = lista;
+                this.dataGridView2.DataSource = invi;
+                this.dataGridView3.DataSource = invcon;
+
+            }
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            if (button2.Enabled == true)
+            {
+                button2.Enabled = false;
+                button2.BackColor = Color.Red;
+
+            }
+            else
+            {
+                button2.Enabled = true;
+                button2.BackColor = Color.White;
+            }
+          
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (button8.Enabled == true)
+            {
+                button8.Enabled = false;
+                button8.BackColor = Color.Red;
+
+            }
+            else
+            {
+                button8.Enabled = true;
+                button8.BackColor = Color.White;
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (button5.Enabled == true)
+            {
+                button5.Enabled = false;
+                button5.BackColor = Color.Red;
+
+            }
+            else
+            {
+                button5.Enabled = true;
+                button5.BackColor = Color.White;
+            }
         }
     }
 }

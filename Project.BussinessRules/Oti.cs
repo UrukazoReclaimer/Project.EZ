@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Project.BussinessRules
 {
-   public class Oti
+    public class Oti
     {
-       string cod;
-       string pericod;
+        string cod;
+        string pericod;
 
 
 
-        public Oti(string cod, string pericod )
- {
-     this.COD = cod;
-     this.PERICOD = pericod; 
-     
+        public Oti(string cod, string pericod)
+        {
+            this.COD = cod;
+            this.PERICOD = pericod;
 
- }
- 
+
+        }
+
 
         public string COD
         {
